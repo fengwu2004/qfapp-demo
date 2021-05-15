@@ -32,13 +32,7 @@
 /**
  *  返回设备欧拉角
  */
-@required - (void)didGetEuler:(double)x y:(double)y z:(double)z;
-
-/**
- *  更新deviece heading
- *
- */
-@optional - (void)didGetDeviceHeading:(CLHeading*)heading;
+@optional - (void)didGetEuler:(double)x y:(double)y z:(double)z;
 
 @end
 
@@ -49,20 +43,20 @@
 
 - (void)setBeaconUUID:(NSArray*)uuidStrings;
 
-/*
+- (void)start;
+
+- (void)stop;
+
+/**
  *  开始获取蓝牙信息
  */
 
 - (void)startUpdateBeacons;
 
-- (void)startUpdateHeading;
-
-/*
+/**
  *  停止获取蓝牙信息
  */
 - (void)stopUpdateBeacons;
-
-- (void)stopUpdateHeading;
 
 @property(nonatomic, weak) id<IDRBaseLocationServerDelegate> delegate;
 

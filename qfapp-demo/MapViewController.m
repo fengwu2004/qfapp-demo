@@ -46,9 +46,11 @@
 
     _locateServer = [[IDRBaseLocationServer alloc] init];
 
+    _locateServer.delegate = self;
+    
     [_locateServer setBeaconUUID:@[@"FDA50693-A4E2-4FB1-AFCF-C6EB07647825"]];
 
-    _locateServer.delegate = self;
+    [_locateServer start];
 
     [_locateServer startUpdateBeacons];
 }

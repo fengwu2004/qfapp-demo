@@ -21,8 +21,6 @@
 
 @property (nonatomic, assign) BOOL isReceiveBeacons;
 
-@property (nonatomic, retain) NSTimer *headingUpdateTimer;
-
 @property (nonatomic, retain) CLHeading *heading;
 
 @property (nonatomic) NSTimer *beaconsUpdateTimer;
@@ -85,7 +83,7 @@
     [self configureManagers];
 }
 
-- (void)setupCoreMotion {
+- (void)startCoreMotion {
     
     _cmMgr = [[CMMotionManager alloc] init];
     
@@ -103,7 +101,13 @@
     
     CMAcceleration acc = accelerometerData.acceleration;
     
-    NSLog(@"%f, %f, %f", acc.x, acc.y, acc.z);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        if ([self.delegate respondsToSelector:@selector(didGetEuler:y:z:)]) {
+            
+            [self.delegate didGetEuler:acc.x y:acc.y z:acc.z];
+        }
+    });
 }
 
 
@@ -132,6 +136,25 @@
 }
 
 #pragma mark - 开始获取蓝牙信息
+
+- (void)start {
+    
+    [self startUpdateBeacons];
+    
+    [self startCoreMotion];
+}
+
+- (void)stop {
+    
+    [self stopUpdateBeacons];
+    
+    [self stopCoreMotion];
+}
+
+- (void)stopCoreMotion {
+    
+    [_cmMgr stopAccelerometerUpdates];
+}
 
 - (void)startUpdateBeacons {
     
@@ -172,21 +195,6 @@
     }
 }
 
-- (void)startUpdateHeading {
-    
-    _headingUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(onHeadingUpdate) userInfo:nil repeats:YES];
-    
-    [_locationManager startUpdatingHeading];
-}
-
-- (void)onHeadingUpdate {
-    
-    if ([self.delegate respondsToSelector:@selector(didGetDeviceHeading:)]) {
-        
-        [self.delegate didGetDeviceHeading:_heading];
-    }
-}
-
 #pragma mark - 停止获取蓝牙信息
 - (void)stopUpdateBeacons {
     
@@ -200,15 +208,6 @@
     _beaconsUpdateTimer = nil;
     
     [_beacons removeAllObjects];
-}
-
-- (void)stopUpdateHeading {
-    
-    [_headingUpdateTimer invalidate];
-    
-    _headingUpdateTimer = nil;
-    
-    [_locationManager stopUpdatingHeading];
 }
 
 #pragma mark - 蓝牙定位实时回调
@@ -315,9 +314,7 @@
 
 - (void)dealloc {
     
-    [self stopUpdateBeacons];
-    
-    [self stopUpdateHeading];
+    [self stop];
 }
 
 @end
