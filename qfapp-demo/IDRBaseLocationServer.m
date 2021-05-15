@@ -91,15 +91,17 @@
     
     _cmMgr.accelerometerUpdateInterval = 1.0/30.0;
     
-    [_cmMgr startAccelerometerUpdatesToQueue:_queue withHandler:^(CMAccelerometerData * _Nullable accelerometerData, NSError * _Nullable error) {
+    __weak IDRBaseLocationServer *weakSelf = self;
+    
+    [_cmMgr startGyroUpdatesToQueue:_queue withHandler:^(CMGyroData * _Nullable gyroData, NSError * _Nullable error) {
             
-        [self updateAccelerometerData:accelerometerData];
+        [weakSelf updateGryoData:gyroData];
     }];
 }
 
-- (void)updateAccelerometerData:(CMAccelerometerData *)accelerometerData {
+- (void)updateGryoData:(CMGyroData *)accelerometerData {
     
-    CMAcceleration acc = accelerometerData.acceleration;
+    CMRotationRate acc = accelerometerData.rotationRate;
     
     dispatch_async(dispatch_get_main_queue(), ^{
         

@@ -32,8 +32,29 @@
 - (void)viewDidLoad {
   
     [super viewDidLoad];
+    
+    [self setupPreview];
 
     [self setupWebview];
+}
+
+- (void)setupPreview {
+    
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    
+    _videoInput = [[AVCaptureDeviceInput alloc] initWithDevice:device error:nil];
+    
+    _session = [[AVCaptureSession alloc] init];
+    
+    [_session addInput:_videoInput];
+    
+    _previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:_session];
+    
+    _previewLayer.frame = CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height);
+    
+    [self.view.layer addSublayer:_previewLayer];
+    
+    [_session startRunning];
 }
 
 - (void)setupWebview {
@@ -49,6 +70,10 @@
     CGRect rect = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height);
     
     _webView = [[WKWebView alloc] initWithFrame:rect configuration:config];
+    
+    _webView.backgroundColor = UIColor.clearColor;
+
+    _webView.opaque = NO;
     
     [self.view addSubview:_webView];
     
@@ -167,6 +192,8 @@
 - (void)dealloc {
   
     [_locateServer stop];
+    
+    [_session stopRunning];
     
     [_timer invalidate];
 }

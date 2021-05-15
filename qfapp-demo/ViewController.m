@@ -11,6 +11,7 @@
 #import "ARMapViewController.h"
 #import "TestVideoCaptureViewController.h"
 #import "TestARViewController.h"
+#import "TestWKViewController.h"
 #import "TestCMViewController.h"
 
 @interface ViewController ()

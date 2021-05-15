@@ -31,19 +31,26 @@
     
     _queue = [NSOperationQueue new];
     
-    _cmMgr.accelerometerUpdateInterval = 1.0/30.0;
+    _cmMgr.gyroUpdateInterval = 0.2;
     
-    [_cmMgr startAccelerometerUpdatesToQueue:_queue withHandler:^(CMAccelerometerData * _Nullable accelerometerData, NSError * _Nullable error) {
+    __weak TestCMViewController *weakSelf = self;
+    
+    [_cmMgr startGyroUpdatesToQueue:_queue withHandler:^(CMGyroData * _Nullable gyroData, NSError * _Nullable error) {
             
-        [self updateAccelerometerData:accelerometerData];
+        [weakSelf updateGryoData:gyroData];
     }];
 }
 
-- (void)updateAccelerometerData:(CMAccelerometerData *)accelerometerData {
+- (void)updateGryoData:(CMGyroData *)gyroData {
     
-    CMAcceleration acc = accelerometerData.acceleration;
+    CMRotationRate acc = gyroData.rotationRate;
     
-    NSLog(@"%f, %f, %f", acc.x, acc.y, acc.z);
+    NSLog(@"%f", acc.x);
+}
+
+- (void)dealloc {
+    
+    [_cmMgr stopGyroUpdates];
 }
 
 @end
