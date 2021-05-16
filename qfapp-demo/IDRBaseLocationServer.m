@@ -89,25 +89,29 @@
     
     _queue = [NSOperationQueue new];
     
-    _cmMgr.accelerometerUpdateInterval = 1.0/30.0;
+    _cmMgr.deviceMotionUpdateInterval = 1.0/30.0;
     
     __weak IDRBaseLocationServer *weakSelf = self;
     
-    [_cmMgr startGyroUpdatesToQueue:_queue withHandler:^(CMGyroData * _Nullable gyroData, NSError * _Nullable error) {
-            
-        [weakSelf updateGryoData:gyroData];
+    [_cmMgr startDeviceMotionUpdatesToQueue:_queue withHandler:^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error) {
+        
+        [weakSelf updatMotion:motion];
     }];
 }
 
-- (void)updateGryoData:(CMGyroData *)accelerometerData {
+- (void)updatMotion:(CMDeviceMotion *)motionData {
     
-    CMRotationRate acc = accelerometerData.rotationRate;
+    double roll = motionData.attitude.roll;
+    
+    double pitch = motionData.attitude.pitch;
+    
+    double yaw = motionData.attitude.yaw;
     
     dispatch_async(dispatch_get_main_queue(), ^{
         
-        if ([self.delegate respondsToSelector:@selector(didGetEuler:y:z:)]) {
+        if ([self.delegate respondsToSelector:@selector(didGetEuler:pitch:roll:)]) {
             
-            [self.delegate didGetEuler:acc.x y:acc.y z:acc.z];
+            [self.delegate didGetEuler:yaw pitch:pitch roll:roll];
         }
     });
 }
@@ -155,7 +159,7 @@
 
 - (void)stopCoreMotion {
     
-    [_cmMgr stopAccelerometerUpdates];
+    [_cmMgr stopDeviceMotionUpdates];
 }
 
 - (void)startUpdateBeacons {
@@ -165,9 +169,11 @@
         [_locationManager startRangingBeaconsInRegion:beaconRegion];
     }
     
+    __weak IDRBaseLocationServer *weakSelf = self;
+    
     _beaconsUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
         
-        [self onUpdateBeacons];
+        [weakSelf onUpdateBeacons];
     }];
     
     [_beaconsUpdateTimer fire];

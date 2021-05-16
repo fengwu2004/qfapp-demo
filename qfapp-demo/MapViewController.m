@@ -70,9 +70,9 @@
     }
 }
 
-- (void)didGetEuler:(double)x y:(double)y z:(double)z {
+- (void)didGetEuler:(double)yaw pitch:(double)pitch roll:(double)roll {
     
-    NSString *js = [NSString stringWithFormat:@"updateEuler(%f, %f, %f)", x, y, z];
+    NSString *js = [NSString stringWithFormat:@"updateEuler(%f, %f, %f)", yaw, pitch, roll];
 
     [_webView evaluateJavaScript:js completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
       

@@ -31,26 +31,24 @@
     
     _queue = [NSOperationQueue new];
     
-    _cmMgr.gyroUpdateInterval = 0.2;
+    _cmMgr.deviceMotionUpdateInterval = 0.5;
     
     __weak TestCMViewController *weakSelf = self;
     
-    [_cmMgr startGyroUpdatesToQueue:_queue withHandler:^(CMGyroData * _Nullable gyroData, NSError * _Nullable error) {
+    [_cmMgr startDeviceMotionUpdatesToQueue:_queue withHandler:^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error) {
             
-        [weakSelf updateGryoData:gyroData];
+        [weakSelf updatMotion:motion];
     }];
 }
 
-- (void)updateGryoData:(CMGyroData *)gyroData {
+- (void)updatMotion:(CMDeviceMotion *)motion {
     
-    CMRotationRate acc = gyroData.rotationRate;
-    
-    NSLog(@"%f", acc.x);
+    NSLog(@"yaw = %f, pitch = %f, roll = %f", motion.attitude.yaw * 180/M_PI, motion.attitude.pitch * 180/M_PI, motion.attitude.roll * 180/M_PI);
 }
 
 - (void)dealloc {
     
-    [_cmMgr stopGyroUpdates];
+    [_cmMgr stopDeviceMotionUpdates];
 }
 
 @end

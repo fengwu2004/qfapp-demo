@@ -32,7 +32,7 @@
 /**
  *  返回设备欧拉角
  */
-@optional - (void)didGetEuler:(double)x y:(double)y z:(double)z;
+@optional - (void)didGetEuler:(double)yaw pitch:(double)pitch roll:(double)roll;
 
 @end
 

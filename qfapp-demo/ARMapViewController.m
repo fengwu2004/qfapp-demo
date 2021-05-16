@@ -11,6 +11,7 @@
 #import "IDRBaseLocationServer.h"
 #import <AVFoundation/AVFoundation.h>
 #import <WebKit/WebKit.h>
+#import "Masonry/Masonry.h"
 
 #define MyJSInterface @"MyJSInterface"
 #define PhoneUUID [[[UIDevice currentDevice] identifierForVendor] UUIDString]
@@ -33,7 +34,7 @@
   
     [super viewDidLoad];
     
-    [self setupPreview];
+//    [self setupPreview];
 
     [self setupWebview];
 }
@@ -53,8 +54,6 @@
     _previewLayer.frame = CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height);
     
     [self.view.layer addSublayer:_previewLayer];
-    
-    [_session startRunning];
 }
 
 - (void)setupWebview {
@@ -102,7 +101,31 @@
         return;
     }
     
-    NSLog(@"xx");
+    NSString *functionName = message.body[@"functionName"];
+    
+    if ([functionName isEqual:@"startAR"]) {
+        
+        [self onStartAR];
+        
+        return;
+    }
+    
+    if ([functionName isEqual:@"stopAR"]) {
+        
+        [self onStopAR];
+        
+        return;
+    }
+}
+
+- (void)onStartAR {
+    
+    [_session startRunning];
+}
+
+- (void)onStopAR {
+    
+    [_session stopRunning];
 }
 
 - (void)startLocate {
@@ -179,9 +202,9 @@
     }
 }
 
-- (void)didGetEuler:(double)x y:(double)y z:(double)z {
+- (void)didGetEuler:(double)yaw pitch:(double)pitch roll:(double)roll {
     
-    NSString *js = [NSString stringWithFormat:@"updateEuler(%f, %f, %f)", x, y, z];
+    NSString *js = [NSString stringWithFormat:@"updateEuler(%f, %f, %f)", yaw, -1 * pitch, roll];
 
     [_webView evaluateJavaScript:js completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
       
@@ -193,7 +216,7 @@
   
     [_locateServer stop];
     
-    [_session stopRunning];
+//    [_session stopRunning];
     
     [_timer invalidate];
 }
