@@ -37,6 +37,7 @@
 		2CF430162650DB8800BB9B6F /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4300C2650DB8800BB9B6F /* MASViewConstraint.m */; };
 		2CF430172650DB8800BB9B6F /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4300D2650DB8800BB9B6F /* MASViewAttribute.m */; };
 		2CF4301A2650E1B300BB9B6F /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF430192650E1B300BB9B6F /* YYWeakProxy.m */; };
+		2CF4301C2650FAA800BB9B6F /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF4301B2650FAA800BB9B6F /* AMapFoundationKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,7 @@
 		2CF4300D2650DB8800BB9B6F /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		2CF430182650E1B300BB9B6F /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
 		2CF430192650E1B300BB9B6F /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
+		2CF4301B2650FAA800BB9B6F /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF4301C2650FAA800BB9B6F /* AMapFoundationKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +132,7 @@
 		2C9E69F61F74B39A00E2A555 /* qfapp-demo */ = {
 			isa = PBXGroup;
 			children = (
+				2CF4301B2650FAA800BB9B6F /* AMapFoundationKit.framework */,
 				2CF42FF42650DB8800BB9B6F /* Masonry */,
 				2C9E6A0E1F74B3AE00E2A555 /* IDRBaseLocationServer.h */,
 				2C9E6A0F1F74B3AE00E2A555 /* IDRBaseLocationServer.m */,
@@ -425,6 +429,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CENUVHQG84;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/qfapp-demo",
+				);
 				INFOPLIST_FILE = "qfapp-demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -438,6 +446,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CENUVHQG84;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/qfapp-demo",
+				);
 				INFOPLIST_FILE = "qfapp-demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
