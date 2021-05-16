@@ -79,6 +79,15 @@
     
     [self.view addSubview:_webView];
     
+    [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+        make.left.right.mas_equalTo(self.view);
+        
+        make.top.equalTo(self.view.mas_topMargin);
+        
+        make.bottom.equalTo(self.view.mas_bottomMargin);
+    }];
+    
     NSString *urlStr = [NSString stringWithFormat:@"https://wx.indoorun.com/ya/ysfzar/?&uuid=%@", PhoneUUID];
 
     NSURL *url = [[NSURL alloc] initWithString:urlStr];

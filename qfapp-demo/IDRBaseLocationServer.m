@@ -85,6 +85,11 @@
 
 - (void)startCoreMotion {
     
+    if (![self.delegate respondsToSelector:@selector(didGetEuler:pitch:roll:)]) {
+        
+        return;
+    }
+    
     _cmMgr = [[CMMotionManager alloc] init];
     
     _queue = [NSOperationQueue new];
@@ -147,7 +152,7 @@
     
     [self startUpdateBeacons];
     
-//    [self startCoreMotion];
+    [self startCoreMotion];
 }
 
 - (void)stop {
