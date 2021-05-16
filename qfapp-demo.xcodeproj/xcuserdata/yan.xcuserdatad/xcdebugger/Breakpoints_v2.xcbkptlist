@@ -23,15 +23,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1A1C2891-6135-4138-B384-BDDAC38AEFE0"
+            uuid = "966FDE7D-847C-4E60-99CB-8681326A91E9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "qfapp-demo/ARMapViewController.m"
+            filePath = "qfapp-demo/MapViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "-dealloc"
             landmarkType = "7">
          </BreakpointContent>

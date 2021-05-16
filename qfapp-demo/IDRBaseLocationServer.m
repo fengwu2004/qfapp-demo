@@ -147,7 +147,7 @@
     
     [self startUpdateBeacons];
     
-    [self startCoreMotion];
+//    [self startCoreMotion];
 }
 
 - (void)stop {

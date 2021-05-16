@@ -36,6 +36,7 @@
 		2CF430152650DB8800BB9B6F /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4300A2650DB8800BB9B6F /* MASConstraint.m */; };
 		2CF430162650DB8800BB9B6F /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4300C2650DB8800BB9B6F /* MASViewConstraint.m */; };
 		2CF430172650DB8800BB9B6F /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4300D2650DB8800BB9B6F /* MASViewAttribute.m */; };
+		2CF4301A2650E1B300BB9B6F /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF430192650E1B300BB9B6F /* YYWeakProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,8 @@
 		2CF4300B2650DB8800BB9B6F /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		2CF4300C2650DB8800BB9B6F /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		2CF4300D2650DB8800BB9B6F /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		2CF430182650E1B300BB9B6F /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		2CF430192650E1B300BB9B6F /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,8 @@
 		2CF42FF42650DB8800BB9B6F /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
+				2CF430182650E1B300BB9B6F /* YYWeakProxy.h */,
+				2CF430192650E1B300BB9B6F /* YYWeakProxy.m */,
 				2CF42FF52650DB8800BB9B6F /* MASCompositeConstraint.h */,
 				2CF42FF62650DB8800BB9B6F /* NSLayoutConstraint+MASDebugAdditions.m */,
 				2CF42FF72650DB8800BB9B6F /* MASConstraint+Private.h */,
@@ -287,6 +292,7 @@
 				2CF430172650DB8800BB9B6F /* MASViewAttribute.m in Sources */,
 				2C9E6A101F74B3AE00E2A555 /* IDRBaseLocationServer.m in Sources */,
 				2CF430102650DB8800BB9B6F /* MASCompositeConstraint.m in Sources */,
+				2CF4301A2650E1B300BB9B6F /* YYWeakProxy.m in Sources */,
 				2CF430142650DB8800BB9B6F /* View+MASAdditions.m in Sources */,
 				2C9E69FF1F74B39A00E2A555 /* ViewController.m in Sources */,
 				2C9198B8264FBDBF00311FA7 /* TestARViewController.m in Sources */,

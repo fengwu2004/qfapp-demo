@@ -12,6 +12,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <WebKit/WebKit.h>
 #import "Masonry/Masonry.h"
+#import "YYWeakProxy.h"
 
 #define MyJSInterface @"MyJSInterface"
 #define PhoneUUID [[[UIDevice currentDevice] identifierForVendor] UUIDString]
@@ -34,7 +35,7 @@
   
     [super viewDidLoad];
     
-//    [self setupPreview];
+    [self setupPreview];
 
     [self setupWebview];
 }
@@ -62,7 +63,9 @@
     
     WKUserContentController *userContentController = [WKUserContentController new];
     
-    [userContentController addScriptMessageHandler:self name:MyJSInterface];
+    id target = [YYWeakProxy proxyWithTarget:self];
+        
+    [userContentController addScriptMessageHandler:target name:MyJSInterface];
     
     config.userContentController = userContentController;
     
@@ -216,7 +219,7 @@
   
     [_locateServer stop];
     
-//    [_session stopRunning];
+    [_session stopRunning];
     
     [_timer invalidate];
 }
