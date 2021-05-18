@@ -36,7 +36,7 @@
     
     [self setupWebview];
     
-    [self startTestBeacons];
+//    [self startTestBeacons];
 }
 
 - (void)setupWebview {

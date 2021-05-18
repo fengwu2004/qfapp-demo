@@ -13,6 +13,9 @@
 
 @property(nonatomic) CMMotionManager *cmMgr;
 @property(nonatomic) NSOperationQueue *queue;
+@property(nonatomic) IBOutlet UILabel *yaw;
+@property(nonatomic) IBOutlet UILabel *pitch;
+@property(nonatomic) IBOutlet UILabel *roll;
 
 @end
 
@@ -31,19 +34,28 @@
     
     _queue = [NSOperationQueue new];
     
-    _cmMgr.deviceMotionUpdateInterval = 0.5;
+    _cmMgr.deviceMotionUpdateInterval = 0.05;
     
     __weak TestCMViewController *weakSelf = self;
     
     [_cmMgr startDeviceMotionUpdatesToQueue:_queue withHandler:^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error) {
+    
+        dispatch_async(dispatch_get_main_queue(), ^{
             
-        [weakSelf updatMotion:motion];
+            [weakSelf updatMotion:motion];
+        });
     }];
 }
 
 - (void)updatMotion:(CMDeviceMotion *)motion {
     
-    NSLog(@"yaw = %f, pitch = %f, roll = %f", motion.attitude.yaw * 180/M_PI, motion.attitude.pitch * 180/M_PI, motion.attitude.roll * 180/M_PI);
+    _yaw.text = [NSString stringWithFormat:@"%.2f",motion.attitude.yaw * 180/M_PI];
+    
+    _pitch.text = [NSString stringWithFormat:@"%.2f",motion.attitude.pitch * 180/M_PI];
+    
+    _roll.text = [NSString stringWithFormat:@"%.2f",motion.attitude.roll * 180/M_PI];
+    
+//    NSLog(@"yaw = %f, pitch = %f, roll = %f", motion.attitude.yaw * 180/M_PI, motion.attitude.pitch * 180/M_PI, motion.attitude.roll * 180/M_PI);
 }
 
 - (void)dealloc {

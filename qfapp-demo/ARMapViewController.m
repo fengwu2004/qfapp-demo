@@ -13,11 +13,12 @@
 #import <WebKit/WebKit.h>
 #import "Masonry/Masonry.h"
 #import "YYWeakProxy.h"
+#import "RequestSensorPermission_JS.h"
 
 #define MyJSInterface @"MyJSInterface"
 #define PhoneUUID [[[UIDevice currentDevice] identifierForVendor] UUIDString]
 
-@interface ARMapViewController () <IDRBaseLocationServerDelegate, WKScriptMessageHandler, WKNavigationDelegate>
+@interface ARMapViewController () <IDRBaseLocationServerDelegate, WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate>
 
 @property(nonatomic) WKWebView *webView;
 @property(nonatomic) IDRBaseLocationServer *locateServer;
@@ -69,6 +70,8 @@
     
     config.userContentController = userContentController;
     
+    config.mediaTypesRequiringUserActionForPlayback = WKAudiovisualMediaTypeNone;
+    
     CGRect rect = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height);
     
     _webView = [[WKWebView alloc] initWithFrame:rect configuration:config];
@@ -95,6 +98,8 @@
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     
     _webView.navigationDelegate = self;
+    
+    _webView.UIDelegate = self;
 
     [_webView loadRequest:request];
 }
@@ -104,6 +109,11 @@
     [self startLocate];
     
     [self startTestBeacons];
+    
+    [webView evaluateJavaScript:RequestSensorPermission_js() completionHandler:^(id _Nullable, NSError * _Nullable error) {
+            
+        NSLog(@"运行成功");
+    }];
 }
 
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {

@@ -26,6 +26,7 @@
 		2C9E6A101F74B3AE00E2A555 /* IDRBaseLocationServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E6A0F1F74B3AE00E2A555 /* IDRBaseLocationServer.m */; };
 		2C9E6A141F74B5B600E2A555 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E6A121F74B5B600E2A555 /* MapViewController.m */; };
 		2C9E6A151F74B5B600E2A555 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E6A131F74B5B600E2A555 /* MapViewController.xib */; };
+		2CAED5BE2653B13200E4C241 /* RequestSensorPermission_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAED5BC2653B13200E4C241 /* RequestSensorPermission_JS.m */; };
 		2CF4300E2650DB8800BB9B6F /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF42FF62650DB8800BB9B6F /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		2CF4300F2650DB8800BB9B6F /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF42FFF2650DB8800BB9B6F /* ViewController+MASAdditions.m */; };
 		2CF430102650DB8800BB9B6F /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF430032650DB8800BB9B6F /* MASCompositeConstraint.m */; };
@@ -71,6 +72,8 @@
 		2C9E6A111F74B5B600E2A555 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		2C9E6A121F74B5B600E2A555 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		2C9E6A131F74B5B600E2A555 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		2CAED5BC2653B13200E4C241 /* RequestSensorPermission_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestSensorPermission_JS.m; sourceTree = "<group>"; };
+		2CAED5BD2653B13200E4C241 /* RequestSensorPermission_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestSensorPermission_JS.h; sourceTree = "<group>"; };
 		2CF42FF52650DB8800BB9B6F /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		2CF42FF62650DB8800BB9B6F /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		2CF42FF72650DB8800BB9B6F /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 				2C9E6A0E1F74B3AE00E2A555 /* IDRBaseLocationServer.h */,
 				2C9E6A0F1F74B3AE00E2A555 /* IDRBaseLocationServer.m */,
 				2C9E69FA1F74B39A00E2A555 /* AppDelegate.h */,
+				2CAED5BD2653B13200E4C241 /* RequestSensorPermission_JS.h */,
+				2CAED5BC2653B13200E4C241 /* RequestSensorPermission_JS.m */,
 				2C9E69FB1F74B39A00E2A555 /* AppDelegate.m */,
 				2C9E69FD1F74B39A00E2A555 /* ViewController.h */,
 				2C9E69FE1F74B39A00E2A555 /* ViewController.m */,
@@ -299,6 +304,7 @@
 				2CF4301A2650E1B300BB9B6F /* YYWeakProxy.m in Sources */,
 				2CF430142650DB8800BB9B6F /* View+MASAdditions.m in Sources */,
 				2C9E69FF1F74B39A00E2A555 /* ViewController.m in Sources */,
+				2CAED5BE2653B13200E4C241 /* RequestSensorPermission_JS.m in Sources */,
 				2C9198B8264FBDBF00311FA7 /* TestARViewController.m in Sources */,
 				2CF430122650DB8800BB9B6F /* MASLayoutConstraint.m in Sources */,
 				2CF430112650DB8800BB9B6F /* MASConstraintMaker.m in Sources */,

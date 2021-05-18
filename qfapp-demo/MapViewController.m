@@ -10,10 +10,11 @@
 #import<WebKit/WebKit.h>
 #import "IDRBaseLocationServer.h"
 #import "Masonry/Masonry.h"
+#import "RequestSensorPermission_JS.h"
 
 #define PhoneUUID [[[UIDevice currentDevice] identifierForVendor] UUIDString]
 
-@interface MapViewController () <IDRBaseLocationServerDelegate, WKNavigationDelegate>
+@interface MapViewController () <IDRBaseLocationServerDelegate, WKNavigationDelegate, WKUIDelegate>
 
 @property(nonatomic) WKWebView *webView;
 @property(nonatomic) IDRBaseLocationServer *locateServer;
@@ -31,7 +32,11 @@
 
 - (void)setupWebview {
     
-    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    WKWebViewConfiguration *config = [WKWebViewConfiguration new];
+    
+    config.mediaTypesRequiringUserActionForPlayback = WKAudiovisualMediaTypeNone;
+    
+    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) configuration:config];
 
     [self.view addSubview:_webView];
     
@@ -51,11 +56,18 @@
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     
     _webView.navigationDelegate = self;
+    
+    _webView.UIDelegate = self;
 
     [_webView loadRequest:request];
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    
+    [webView evaluateJavaScript:RequestSensorPermission_js() completionHandler:^(id _Nullable, NSError * _Nullable error) {
+            
+        NSLog(@"运行成功");
+    }];
     
     if (!_locateServer) {
         

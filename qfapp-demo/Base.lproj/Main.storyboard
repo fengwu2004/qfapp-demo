@@ -49,40 +49,22 @@
                                     <action selector="onARMap:" destination="tRA-Ne-odW" eventType="touchUpInside" id="dF6-ZK-lDB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUg-zc-Sh8">
-                                <rect key="frame" x="162" y="482" width="51" height="30"/>
-                                <state key="normal" title="测试AR"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMh-ph-79W">
+                                <rect key="frame" x="172.5" y="475" width="30" height="30"/>
+                                <state key="normal" title="Test"/>
                                 <connections>
-                                    <action selector="onTestVideoOutput:" destination="tRA-Ne-odW" eventType="touchUpInside" id="4hR-fp-KoU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BR-SX-YZA">
-                                <rect key="frame" x="164.5" y="547" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="onTestAR:" destination="tRA-Ne-odW" eventType="touchUpInside" id="p2m-iU-khW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9X0-S3-TZ6">
-                                <rect key="frame" x="161" y="604" width="53" height="30"/>
-                                <state key="normal" title="TestCM"/>
-                                <connections>
-                                    <action selector="onTestCoreMotion:" destination="tRA-Ne-odW" eventType="touchUpInside" id="L9j-QY-ybl"/>
+                                    <action selector="onTestCoreMotion:" destination="tRA-Ne-odW" eventType="touchUpInside" id="DN2-lu-sNO"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yUg-zc-Sh8" firstAttribute="centerX" secondItem="GJp-0K-TrB" secondAttribute="centerX" id="0Lh-Be-Kj8"/>
-                            <constraint firstItem="6BR-SX-YZA" firstAttribute="centerX" secondItem="yUg-zc-Sh8" secondAttribute="centerX" id="339-O8-jzY"/>
-                            <constraint firstItem="6BR-SX-YZA" firstAttribute="top" secondItem="yUg-zc-Sh8" secondAttribute="bottom" constant="35" id="4GV-AK-LSP"/>
                             <constraint firstItem="DJj-aY-5OQ" firstAttribute="centerX" secondItem="Mu0-Bc-mvw" secondAttribute="centerX" id="4Ig-DL-qYA"/>
-                            <constraint firstItem="9X0-S3-TZ6" firstAttribute="top" secondItem="6BR-SX-YZA" secondAttribute="bottom" constant="27" id="9Kh-w7-Ns5"/>
                             <constraint firstItem="GJp-0K-TrB" firstAttribute="centerX" secondItem="DJj-aY-5OQ" secondAttribute="centerX" id="NyF-lc-jF8"/>
+                            <constraint firstItem="TMh-ph-79W" firstAttribute="top" secondItem="GJp-0K-TrB" secondAttribute="bottom" constant="50" id="Ts7-Ym-n1j"/>
                             <constraint firstItem="GJp-0K-TrB" firstAttribute="top" secondItem="DJj-aY-5OQ" secondAttribute="bottom" constant="46.5" id="VoC-ZK-r8z"/>
-                            <constraint firstItem="9X0-S3-TZ6" firstAttribute="centerX" secondItem="6BR-SX-YZA" secondAttribute="centerX" id="cce-y1-d27"/>
-                            <constraint firstItem="yUg-zc-Sh8" firstAttribute="top" secondItem="GJp-0K-TrB" secondAttribute="bottom" constant="57" id="qpz-7e-Jpr"/>
                             <constraint firstItem="DJj-aY-5OQ" firstAttribute="centerY" secondItem="Mu0-Bc-mvw" secondAttribute="centerY" id="tHh-XL-CMg"/>
+                            <constraint firstItem="TMh-ph-79W" firstAttribute="centerX" secondItem="GJp-0K-TrB" secondAttribute="centerX" id="vuM-GA-naA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Haq-Lf-Fh0"/>
