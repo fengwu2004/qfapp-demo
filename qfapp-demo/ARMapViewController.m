@@ -226,7 +226,7 @@
 
 - (void)didGetEuler:(double)yaw pitch:(double)pitch roll:(double)roll {
     
-    NSString *js = [NSString stringWithFormat:@"updateEuler(%f, %f, %f)", yaw, -1 * pitch, roll];
+    NSString *js = [NSString stringWithFormat:@"updateEuler(%f, %f, %f)", M_PI - yaw, -1 * pitch, roll];
 
     [_webView evaluateJavaScript:js completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
       
