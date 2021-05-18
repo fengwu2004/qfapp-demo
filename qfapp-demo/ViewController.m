@@ -13,6 +13,7 @@
 #import "TestARViewController.h"
 #import "TestWKViewController.h"
 #import "TestCMViewController.h"
+#import "OurdoorToIndoorViewController.h"
 
 @interface ViewController ()
 
@@ -55,9 +56,9 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (IBAction)onTestCoreMotion:(id)sender {
+- (IBAction)onOutdoorToIndoor:(id)sender {
     
-    TestCMViewController *vc = [TestCMViewController new];
+    OurdoorToIndoorViewController *vc = [OurdoorToIndoorViewController new];
     
     [self.navigationController pushViewController:vc animated:YES];
 }

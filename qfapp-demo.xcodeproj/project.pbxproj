@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C42F9702653D970008EAD61 /* OurdoorToIndoorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F96E2653D970008EAD61 /* OurdoorToIndoorViewController.m */; };
+		2C42F9712653D970008EAD61 /* OurdoorToIndoorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C42F96F2653D970008EAD61 /* OurdoorToIndoorViewController.xib */; };
 		2C68227A264F68A900134E8A /* ARMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C682278264F68A900134E8A /* ARMapViewController.m */; };
 		2C68227B264F68A900134E8A /* ARMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C682279264F68A900134E8A /* ARMapViewController.xib */; };
 		2C6824D3264FB3B600134E8A /* TestVideoCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6824D1264FB3B600134E8A /* TestVideoCaptureViewController.m */; };
@@ -38,10 +40,13 @@
 		2CF430162650DB8800BB9B6F /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4300C2650DB8800BB9B6F /* MASViewConstraint.m */; };
 		2CF430172650DB8800BB9B6F /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4300D2650DB8800BB9B6F /* MASViewAttribute.m */; };
 		2CF4301A2650E1B300BB9B6F /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF430192650E1B300BB9B6F /* YYWeakProxy.m */; };
-		2CF4301C2650FAA800BB9B6F /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF4301B2650FAA800BB9B6F /* AMapFoundationKit.framework */; };
+		DEDD62BAEC0AED0F7CDA1C88 /* libPods-qfapp-demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D72BCA4385E234963C81E9 /* libPods-qfapp-demo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C42F96D2653D970008EAD61 /* OurdoorToIndoorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OurdoorToIndoorViewController.h; sourceTree = "<group>"; };
+		2C42F96E2653D970008EAD61 /* OurdoorToIndoorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OurdoorToIndoorViewController.m; sourceTree = "<group>"; };
+		2C42F96F2653D970008EAD61 /* OurdoorToIndoorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OurdoorToIndoorViewController.xib; sourceTree = "<group>"; };
 		2C682277264F68A900134E8A /* ARMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARMapViewController.h; sourceTree = "<group>"; };
 		2C682278264F68A900134E8A /* ARMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARMapViewController.m; sourceTree = "<group>"; };
 		2C682279264F68A900134E8A /* ARMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARMapViewController.xib; sourceTree = "<group>"; };
@@ -101,7 +106,9 @@
 		2CF4300D2650DB8800BB9B6F /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		2CF430182650E1B300BB9B6F /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
 		2CF430192650E1B300BB9B6F /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
-		2CF4301B2650FAA800BB9B6F /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
+		905961B76267CBBB0E7E0BED /* Pods-qfapp-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qfapp-demo.debug.xcconfig"; path = "Target Support Files/Pods-qfapp-demo/Pods-qfapp-demo.debug.xcconfig"; sourceTree = "<group>"; };
+		F3D72BCA4385E234963C81E9 /* libPods-qfapp-demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-qfapp-demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7D5BCA1DA57FC8EA27D3B61 /* Pods-qfapp-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qfapp-demo.release.xcconfig"; path = "Target Support Files/Pods-qfapp-demo/Pods-qfapp-demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CF4301C2650FAA800BB9B6F /* AMapFoundationKit.framework in Frameworks */,
+				DEDD62BAEC0AED0F7CDA1C88 /* libPods-qfapp-demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +128,8 @@
 			children = (
 				2C9E69F61F74B39A00E2A555 /* qfapp-demo */,
 				2C9E69F51F74B39A00E2A555 /* Products */,
+				99AFCD779C24C96A1AFB35C2 /* Pods */,
+				B59EE741637E6F3324FE3E96 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,7 +144,6 @@
 		2C9E69F61F74B39A00E2A555 /* qfapp-demo */ = {
 			isa = PBXGroup;
 			children = (
-				2CF4301B2650FAA800BB9B6F /* AMapFoundationKit.framework */,
 				2CF42FF42650DB8800BB9B6F /* Masonry */,
 				2C9E6A0E1F74B3AE00E2A555 /* IDRBaseLocationServer.h */,
 				2C9E6A0F1F74B3AE00E2A555 /* IDRBaseLocationServer.m */,
@@ -168,6 +176,9 @@
 				2C9198BF264FDCED00311FA7 /* TestWKViewController.h */,
 				2C9198C0264FDCED00311FA7 /* TestWKViewController.m */,
 				2C9198C1264FDCED00311FA7 /* TestWKViewController.xib */,
+				2C42F96D2653D970008EAD61 /* OurdoorToIndoorViewController.h */,
+				2C42F96E2653D970008EAD61 /* OurdoorToIndoorViewController.m */,
+				2C42F96F2653D970008EAD61 /* OurdoorToIndoorViewController.xib */,
 			);
 			path = "qfapp-demo";
 			sourceTree = "<group>";
@@ -214,6 +225,23 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		99AFCD779C24C96A1AFB35C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				905961B76267CBBB0E7E0BED /* Pods-qfapp-demo.debug.xcconfig */,
+				F7D5BCA1DA57FC8EA27D3B61 /* Pods-qfapp-demo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B59EE741637E6F3324FE3E96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3D72BCA4385E234963C81E9 /* libPods-qfapp-demo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -221,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C9E6A0B1F74B39A00E2A555 /* Build configuration list for PBXNativeTarget "qfapp-demo" */;
 			buildPhases = (
+				DFFEFE68829C3045D16B9561 /* [CP] Check Pods Manifest.lock */,
 				2C9E69F01F74B39A00E2A555 /* Sources */,
 				2C9E69F11F74B39A00E2A555 /* Frameworks */,
 				2C9E69F21F74B39A00E2A555 /* Resources */,
+				69E831D170B0667E7C54977E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -277,6 +307,7 @@
 				2C9198BE264FC6DD00311FA7 /* TestCMViewController.xib in Resources */,
 				2C68227B264F68A900134E8A /* ARMapViewController.xib in Resources */,
 				2C9E6A071F74B39A00E2A555 /* LaunchScreen.storyboard in Resources */,
+				2C42F9712653D970008EAD61 /* OurdoorToIndoorViewController.xib in Resources */,
 				2C9E6A041F74B39A00E2A555 /* Assets.xcassets in Resources */,
 				2C6824D4264FB3B600134E8A /* TestVideoCaptureViewController.xib in Resources */,
 				2C9198B9264FBDBF00311FA7 /* TestARViewController.xib in Resources */,
@@ -287,6 +318,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69E831D170B0667E7C54977E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-qfapp-demo/Pods-qfapp-demo-resources.sh",
+				"${PODS_ROOT}/AMapNavi/AMapNaviKit.framework/AMapNavi.bundle",
+				"${PODS_ROOT}/AMapNavi/AMapNaviKit.framework/AMap.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMapNavi.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-qfapp-demo/Pods-qfapp-demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFFEFE68829C3045D16B9561 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-qfapp-demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C9E69F01F74B39A00E2A555 /* Sources */ = {
@@ -310,6 +386,7 @@
 				2CF430112650DB8800BB9B6F /* MASConstraintMaker.m in Sources */,
 				2C9198C2264FDCED00311FA7 /* TestWKViewController.m in Sources */,
 				2C9E6A141F74B5B600E2A555 /* MapViewController.m in Sources */,
+				2C42F9702653D970008EAD61 /* OurdoorToIndoorViewController.m in Sources */,
 				2C9E69FC1F74B39A00E2A555 /* AppDelegate.m in Sources */,
 				2CF430132650DB8800BB9B6F /* NSArray+MASAdditions.m in Sources */,
 				2C9198BD264FC6DD00311FA7 /* TestCMViewController.m in Sources */,
@@ -432,6 +509,7 @@
 		};
 		2C9E6A0C1F74B39A00E2A555 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 905961B76267CBBB0E7E0BED /* Pods-qfapp-demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CENUVHQG84;
@@ -449,6 +527,7 @@
 		};
 		2C9E6A0D1F74B39A00E2A555 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7D5BCA1DA57FC8EA27D3B61 /* Pods-qfapp-demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CENUVHQG84;

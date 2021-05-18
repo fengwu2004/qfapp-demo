@@ -50,10 +50,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMh-ph-79W">
-                                <rect key="frame" x="172.5" y="475" width="30" height="30"/>
-                                <state key="normal" title="Test"/>
+                                <rect key="frame" x="164.5" y="475" width="46" height="30"/>
+                                <state key="normal" title="室内外"/>
                                 <connections>
-                                    <action selector="onTestCoreMotion:" destination="tRA-Ne-odW" eventType="touchUpInside" id="DN2-lu-sNO"/>
+                                    <action selector="onOutdoorToIndoor:" destination="tRA-Ne-odW" eventType="touchUpInside" id="WNK-SN-FOe"/>
                                 </connections>
                             </button>
                         </subviews>
