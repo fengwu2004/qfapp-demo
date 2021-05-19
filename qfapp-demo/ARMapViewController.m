@@ -108,7 +108,7 @@
     
     [self startLocate];
     
-    [self startTestBeacons];
+//    [self startTestBeacons];
     
     [webView evaluateJavaScript:RequestSensorPermission_js() completionHandler:^(id _Nullable, NSError * _Nullable error) {
             
@@ -143,11 +143,15 @@
 - (void)onStartAR {
     
     [_session startRunning];
+    
+    [_previewLayer setHidden:NO];
 }
 
 - (void)onStopAR {
     
     [_session stopRunning];
+    
+    [_previewLayer setHidden:YES];
 }
 
 - (void)startLocate {

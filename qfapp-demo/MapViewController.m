@@ -49,7 +49,7 @@
         make.bottom.equalTo(self.view.mas_bottomMargin);
     }];
   
-    NSString *urlStr = [NSString stringWithFormat:@"https://wx.indoorun.com/ya/hnav3.3/?regionId=16194197598672889&unitName=670&uuid=%@", PhoneUUID];
+    NSString *urlStr = [NSString stringWithFormat:@"https://wx.indoorun.com/ya/ysfz2/?regionId=16194197598672889&startCarNav=0&unitName=670&uuid=%@", PhoneUUID];
 
     NSURL *url = [[NSURL alloc] initWithString:urlStr];
 

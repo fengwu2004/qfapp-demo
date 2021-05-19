@@ -45,6 +45,8 @@
     AMapNaviCompositeUserConfig *config = [[AMapNaviCompositeUserConfig alloc] init];
     //传入终点坐标
     [config setRoutePlanPOIType:AMapNaviRoutePlanPOITypeEnd location:[AMapNaviPoint locationWithLatitude:26.6454 longitude:106.647334] name:nil POIId:nil];
+    
+    [config setStartNaviDirectly:YES];
     //启动
     [self.compositeManager presentRoutePlanViewControllerWithOptions:config];
 }
@@ -57,8 +59,6 @@
 }
 
 - (void)compositeManager:(AMapNaviCompositeManager *)compositeManager didBackwardAction:(AMapNaviCompositeVCBackwardActionType)backwardActionType {
-    
-    [self.compositeManager dismissWithAnimated:YES];
     
     [self setupWebview];
 }
