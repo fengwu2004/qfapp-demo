@@ -126,11 +126,11 @@
 		2C9E69F61F74B39A00E2A555 /* qfapp-demo */ = {
 			isa = PBXGroup;
 			children = (
-				2CF430182650E1B300BB9B6F /* YYWeakProxy.h */,
-				2CF430192650E1B300BB9B6F /* YYWeakProxy.m */,
 				2CF42FF42650DB8800BB9B6F /* Masonry */,
 				2C9E6A0E1F74B3AE00E2A555 /* IDRBaseLocationServer.h */,
 				2C9E6A0F1F74B3AE00E2A555 /* IDRBaseLocationServer.m */,
+				2CF430182650E1B300BB9B6F /* YYWeakProxy.h */,
+				2CF430192650E1B300BB9B6F /* YYWeakProxy.m */,
 				2C9E69FA1F74B39A00E2A555 /* AppDelegate.h */,
 				2C9E69FB1F74B39A00E2A555 /* AppDelegate.m */,
 				2C9E69FD1F74B39A00E2A555 /* ViewController.h */,
