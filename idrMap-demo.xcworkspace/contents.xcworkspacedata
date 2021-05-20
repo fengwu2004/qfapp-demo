@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/yan/Desktop/ios/qfapp-demo/idrMap-demo.xcodeproj">
+      location = "group:idrMap-demo.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
