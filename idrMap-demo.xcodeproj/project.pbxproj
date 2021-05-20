@@ -46,7 +46,7 @@
 		2C9198BA264FC6DD00311FA7 /* TestCMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCMViewController.h; sourceTree = "<group>"; };
 		2C9198BB264FC6DD00311FA7 /* TestCMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCMViewController.m; sourceTree = "<group>"; };
 		2C9198BC264FC6DD00311FA7 /* TestCMViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCMViewController.xib; sourceTree = "<group>"; };
-		2C9E69F41F74B39A00E2A555 /* qfapp-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "qfapp-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C9E69F41F74B39A00E2A555 /* idrMap-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "idrMap-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9E69F81F74B39A00E2A555 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C9E69FA1F74B39A00E2A555 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C9E69FB1F74B39A00E2A555 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		2C9E69F51F74B39A00E2A555 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2C9E69F41F74B39A00E2A555 /* qfapp-demo.app */,
+				2C9E69F41F74B39A00E2A555 /* idrMap-demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,9 +216,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2C9E69F31F74B39A00E2A555 /* qfapp-demo */ = {
+		2C9E69F31F74B39A00E2A555 /* idrMap-demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C9E6A0B1F74B39A00E2A555 /* Build configuration list for PBXNativeTarget "qfapp-demo" */;
+			buildConfigurationList = 2C9E6A0B1F74B39A00E2A555 /* Build configuration list for PBXNativeTarget "idrMap-demo" */;
 			buildPhases = (
 				DFFEFE68829C3045D16B9561 /* [CP] Check Pods Manifest.lock */,
 				2C9E69F01F74B39A00E2A555 /* Sources */,
@@ -230,9 +230,9 @@
 			);
 			dependencies = (
 			);
-			name = "qfapp-demo";
+			name = "idrMap-demo";
 			productName = "qfapp-demo";
-			productReference = 2C9E69F41F74B39A00E2A555 /* qfapp-demo.app */;
+			productReference = 2C9E69F41F74B39A00E2A555 /* idrMap-demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -251,7 +251,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2C9E69EF1F74B39A00E2A555 /* Build configuration list for PBXProject "qfapp-demo" */;
+			buildConfigurationList = 2C9E69EF1F74B39A00E2A555 /* Build configuration list for PBXProject "idrMap-demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -265,7 +265,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2C9E69F31F74B39A00E2A555 /* qfapp-demo */,
+				2C9E69F31F74B39A00E2A555 /* idrMap-demo */,
 			);
 		};
 /* End PBXProject section */
@@ -510,7 +510,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2C9E69EF1F74B39A00E2A555 /* Build configuration list for PBXProject "qfapp-demo" */ = {
+		2C9E69EF1F74B39A00E2A555 /* Build configuration list for PBXProject "idrMap-demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2C9E6A091F74B39A00E2A555 /* Debug */,
@@ -519,7 +519,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C9E6A0B1F74B39A00E2A555 /* Build configuration list for PBXNativeTarget "qfapp-demo" */ = {
+		2C9E6A0B1F74B39A00E2A555 /* Build configuration list for PBXNativeTarget "idrMap-demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2C9E6A0C1F74B39A00E2A555 /* Debug */,

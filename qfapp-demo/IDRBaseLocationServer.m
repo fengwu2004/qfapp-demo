@@ -332,6 +332,7 @@
 
 @end
 
+//--------------------------------------------------------------------------------
 NSString * RequestSensorPermission_js() {
     #define __wvjb_js_func__(x) #x
     
