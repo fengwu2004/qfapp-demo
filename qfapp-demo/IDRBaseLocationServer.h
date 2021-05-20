@@ -41,22 +41,23 @@
 
 + (instancetype)sharedInstance;
 
+/**
+ *  设置蓝牙beacon uuids, 定位之前需要设置
+ */
+
 - (void)setBeaconUUID:(NSArray*)uuidStrings;
+
+/**
+ *  开始定位
+ */
 
 - (void)start;
 
+/**
+ *  结束定位
+ */
+
 - (void)stop;
-
-/**
- *  开始获取蓝牙信息
- */
-
-- (void)startUpdateBeacons;
-
-/**
- *  停止获取蓝牙信息
- */
-- (void)stopUpdateBeacons;
 
 @property(nonatomic, weak) id<IDRBaseLocationServerDelegate> delegate;
 

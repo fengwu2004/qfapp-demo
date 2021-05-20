@@ -70,6 +70,8 @@
     
     config.userContentController = userContentController;
     
+    config.websiteDataStore = [WKWebsiteDataStore defaultDataStore];
+    
     config.mediaTypesRequiringUserActionForPlayback = WKAudiovisualMediaTypeNone;
     
     CGRect rect = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height);

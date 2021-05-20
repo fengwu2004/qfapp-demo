@@ -9,9 +9,6 @@
 #import "ViewController.h"
 #import "MapViewController.h"
 #import "ARMapViewController.h"
-#import "TestVideoCaptureViewController.h"
-#import "TestARViewController.h"
-#import "TestWKViewController.h"
 #import "TestCMViewController.h"
 #import "OurdoorToIndoorViewController.h"
 
@@ -38,20 +35,6 @@
 - (IBAction)onARMap:(id)sender {
     
     ARMapViewController *vc = [ARMapViewController new];
-    
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (IBAction)onTestVideoOutput:(id)sender {
-    
-    TestVideoCaptureViewController *vc = [TestVideoCaptureViewController new];
-    
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (IBAction)onTestAR:(id)sender {
-    
-    TestARViewController *vc = [TestARViewController new];
     
     [self.navigationController pushViewController:vc animated:YES];
 }

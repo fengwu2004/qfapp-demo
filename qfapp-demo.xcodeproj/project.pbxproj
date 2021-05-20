@@ -11,14 +11,8 @@
 		2C42F9712653D970008EAD61 /* OurdoorToIndoorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C42F96F2653D970008EAD61 /* OurdoorToIndoorViewController.xib */; };
 		2C68227A264F68A900134E8A /* ARMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C682278264F68A900134E8A /* ARMapViewController.m */; };
 		2C68227B264F68A900134E8A /* ARMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C682279264F68A900134E8A /* ARMapViewController.xib */; };
-		2C6824D3264FB3B600134E8A /* TestVideoCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6824D1264FB3B600134E8A /* TestVideoCaptureViewController.m */; };
-		2C6824D4264FB3B600134E8A /* TestVideoCaptureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C6824D2264FB3B600134E8A /* TestVideoCaptureViewController.xib */; };
-		2C9198B8264FBDBF00311FA7 /* TestARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9198B6264FBDBF00311FA7 /* TestARViewController.m */; };
-		2C9198B9264FBDBF00311FA7 /* TestARViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9198B7264FBDBF00311FA7 /* TestARViewController.xib */; };
 		2C9198BD264FC6DD00311FA7 /* TestCMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9198BB264FC6DD00311FA7 /* TestCMViewController.m */; };
 		2C9198BE264FC6DD00311FA7 /* TestCMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9198BC264FC6DD00311FA7 /* TestCMViewController.xib */; };
-		2C9198C2264FDCED00311FA7 /* TestWKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9198C0264FDCED00311FA7 /* TestWKViewController.m */; };
-		2C9198C3264FDCED00311FA7 /* TestWKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9198C1264FDCED00311FA7 /* TestWKViewController.xib */; };
 		2C9E69F91F74B39A00E2A555 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E69F81F74B39A00E2A555 /* main.m */; };
 		2C9E69FC1F74B39A00E2A555 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E69FB1F74B39A00E2A555 /* AppDelegate.m */; };
 		2C9E69FF1F74B39A00E2A555 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E69FE1F74B39A00E2A555 /* ViewController.m */; };
@@ -50,18 +44,9 @@
 		2C682277264F68A900134E8A /* ARMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARMapViewController.h; sourceTree = "<group>"; };
 		2C682278264F68A900134E8A /* ARMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARMapViewController.m; sourceTree = "<group>"; };
 		2C682279264F68A900134E8A /* ARMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARMapViewController.xib; sourceTree = "<group>"; };
-		2C6824D0264FB3B600134E8A /* TestVideoCaptureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestVideoCaptureViewController.h; sourceTree = "<group>"; };
-		2C6824D1264FB3B600134E8A /* TestVideoCaptureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestVideoCaptureViewController.m; sourceTree = "<group>"; };
-		2C6824D2264FB3B600134E8A /* TestVideoCaptureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestVideoCaptureViewController.xib; sourceTree = "<group>"; };
-		2C9198B5264FBDBF00311FA7 /* TestARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestARViewController.h; sourceTree = "<group>"; };
-		2C9198B6264FBDBF00311FA7 /* TestARViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestARViewController.m; sourceTree = "<group>"; };
-		2C9198B7264FBDBF00311FA7 /* TestARViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestARViewController.xib; sourceTree = "<group>"; };
 		2C9198BA264FC6DD00311FA7 /* TestCMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCMViewController.h; sourceTree = "<group>"; };
 		2C9198BB264FC6DD00311FA7 /* TestCMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCMViewController.m; sourceTree = "<group>"; };
 		2C9198BC264FC6DD00311FA7 /* TestCMViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCMViewController.xib; sourceTree = "<group>"; };
-		2C9198BF264FDCED00311FA7 /* TestWKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestWKViewController.h; sourceTree = "<group>"; };
-		2C9198C0264FDCED00311FA7 /* TestWKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestWKViewController.m; sourceTree = "<group>"; };
-		2C9198C1264FDCED00311FA7 /* TestWKViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestWKViewController.xib; sourceTree = "<group>"; };
 		2C9E69F41F74B39A00E2A555 /* qfapp-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "qfapp-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9E69F81F74B39A00E2A555 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C9E69FA1F74B39A00E2A555 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -147,9 +132,9 @@
 				2CF42FF42650DB8800BB9B6F /* Masonry */,
 				2C9E6A0E1F74B3AE00E2A555 /* IDRBaseLocationServer.h */,
 				2C9E6A0F1F74B3AE00E2A555 /* IDRBaseLocationServer.m */,
-				2C9E69FA1F74B39A00E2A555 /* AppDelegate.h */,
 				2CAED5BD2653B13200E4C241 /* RequestSensorPermission_JS.h */,
 				2CAED5BC2653B13200E4C241 /* RequestSensorPermission_JS.m */,
+				2C9E69FA1F74B39A00E2A555 /* AppDelegate.h */,
 				2C9E69FB1F74B39A00E2A555 /* AppDelegate.m */,
 				2C9E69FD1F74B39A00E2A555 /* ViewController.h */,
 				2C9E69FE1F74B39A00E2A555 /* ViewController.m */,
@@ -164,18 +149,9 @@
 				2C682277264F68A900134E8A /* ARMapViewController.h */,
 				2C682278264F68A900134E8A /* ARMapViewController.m */,
 				2C682279264F68A900134E8A /* ARMapViewController.xib */,
-				2C6824D0264FB3B600134E8A /* TestVideoCaptureViewController.h */,
-				2C6824D1264FB3B600134E8A /* TestVideoCaptureViewController.m */,
-				2C6824D2264FB3B600134E8A /* TestVideoCaptureViewController.xib */,
-				2C9198B5264FBDBF00311FA7 /* TestARViewController.h */,
-				2C9198B6264FBDBF00311FA7 /* TestARViewController.m */,
-				2C9198B7264FBDBF00311FA7 /* TestARViewController.xib */,
 				2C9198BA264FC6DD00311FA7 /* TestCMViewController.h */,
 				2C9198BB264FC6DD00311FA7 /* TestCMViewController.m */,
 				2C9198BC264FC6DD00311FA7 /* TestCMViewController.xib */,
-				2C9198BF264FDCED00311FA7 /* TestWKViewController.h */,
-				2C9198C0264FDCED00311FA7 /* TestWKViewController.m */,
-				2C9198C1264FDCED00311FA7 /* TestWKViewController.xib */,
 				2C42F96D2653D970008EAD61 /* OurdoorToIndoorViewController.h */,
 				2C42F96E2653D970008EAD61 /* OurdoorToIndoorViewController.m */,
 				2C42F96F2653D970008EAD61 /* OurdoorToIndoorViewController.xib */,
@@ -309,11 +285,8 @@
 				2C9E6A071F74B39A00E2A555 /* LaunchScreen.storyboard in Resources */,
 				2C42F9712653D970008EAD61 /* OurdoorToIndoorViewController.xib in Resources */,
 				2C9E6A041F74B39A00E2A555 /* Assets.xcassets in Resources */,
-				2C6824D4264FB3B600134E8A /* TestVideoCaptureViewController.xib in Resources */,
-				2C9198B9264FBDBF00311FA7 /* TestARViewController.xib in Resources */,
 				2C9E6A021F74B39A00E2A555 /* Main.storyboard in Resources */,
 				2C9E6A151F74B5B600E2A555 /* MapViewController.xib in Resources */,
-				2C9198C3264FDCED00311FA7 /* TestWKViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,16 +354,13 @@
 				2CF430142650DB8800BB9B6F /* View+MASAdditions.m in Sources */,
 				2C9E69FF1F74B39A00E2A555 /* ViewController.m in Sources */,
 				2CAED5BE2653B13200E4C241 /* RequestSensorPermission_JS.m in Sources */,
-				2C9198B8264FBDBF00311FA7 /* TestARViewController.m in Sources */,
 				2CF430122650DB8800BB9B6F /* MASLayoutConstraint.m in Sources */,
 				2CF430112650DB8800BB9B6F /* MASConstraintMaker.m in Sources */,
-				2C9198C2264FDCED00311FA7 /* TestWKViewController.m in Sources */,
 				2C9E6A141F74B5B600E2A555 /* MapViewController.m in Sources */,
 				2C42F9702653D970008EAD61 /* OurdoorToIndoorViewController.m in Sources */,
 				2C9E69FC1F74B39A00E2A555 /* AppDelegate.m in Sources */,
 				2CF430132650DB8800BB9B6F /* NSArray+MASAdditions.m in Sources */,
 				2C9198BD264FC6DD00311FA7 /* TestCMViewController.m in Sources */,
-				2C6824D3264FB3B600134E8A /* TestVideoCaptureViewController.m in Sources */,
 				2C9E69F91F74B39A00E2A555 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

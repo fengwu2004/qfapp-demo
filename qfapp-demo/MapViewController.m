@@ -36,6 +36,8 @@
     
     config.mediaTypesRequiringUserActionForPlayback = WKAudiovisualMediaTypeNone;
     
+    config.websiteDataStore = [WKWebsiteDataStore defaultDataStore];
+    
     _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) configuration:config];
 
     [self.view addSubview:_webView];
