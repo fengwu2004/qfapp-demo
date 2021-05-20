@@ -13,7 +13,6 @@
 #import <WebKit/WebKit.h>
 #import "Masonry/Masonry.h"
 #import "YYWeakProxy.h"
-#import "RequestSensorPermission_JS.h"
 
 #define MyJSInterface @"MyJSInterface"
 #define PhoneUUID [[[UIDevice currentDevice] identifierForVendor] UUIDString]

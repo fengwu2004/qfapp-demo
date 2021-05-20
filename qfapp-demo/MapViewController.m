@@ -10,7 +10,6 @@
 #import<WebKit/WebKit.h>
 #import "IDRBaseLocationServer.h"
 #import "Masonry/Masonry.h"
-#import "RequestSensorPermission_JS.h"
 
 #define PhoneUUID [[[UIDevice currentDevice] identifierForVendor] UUIDString]
 

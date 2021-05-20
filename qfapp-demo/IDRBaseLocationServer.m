@@ -331,3 +331,26 @@
 }
 
 @end
+
+NSString * RequestSensorPermission_js() {
+    #define __wvjb_js_func__(x) #x
+    
+    // BEGIN preprocessorJSCode
+    static NSString * preprocessorJSCode = @__wvjb_js_func__(
+;(function() {
+        if (typeof(DeviceMotionEvent) !== 'undefined' && typeof(DeviceMotionEvent.requestPermission) === 'function') {
+               DeviceMotionEvent.requestPermission().then(response => {
+                   if (response == 'granted') {
+                       window.addEventListener('devicemotion', (e) => { })
+                   }
+               }).catch(console.error)
+           }
+
+    
+})();
+    ); // END preprocessorJSCode
+
+    #undef __wvjb_js_func__
+    return preprocessorJSCode;
+};
+
