@@ -485,7 +485,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/qfapp-demo",
 				);
-				INFOPLIST_FILE = "qfapp-demo/Info.plist";
+				INFOPLIST_FILE = "idrMap-demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.we.wret;
@@ -503,7 +503,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/qfapp-demo",
 				);
-				INFOPLIST_FILE = "qfapp-demo/Info.plist";
+				INFOPLIST_FILE = "idrMap-demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.we.wret;

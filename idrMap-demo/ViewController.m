@@ -46,4 +46,11 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (IBAction)onTestSensor:(id)sender {
+    
+    TestCMViewController *vc = [TestCMViewController new];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 @end
