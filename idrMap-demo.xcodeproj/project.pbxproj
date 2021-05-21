@@ -11,8 +11,6 @@
 		2C42F9712653D970008EAD61 /* OurdoorToIndoorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C42F96F2653D970008EAD61 /* OurdoorToIndoorViewController.xib */; };
 		2C68227A264F68A900134E8A /* ARMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C682278264F68A900134E8A /* ARMapViewController.m */; };
 		2C68227B264F68A900134E8A /* ARMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C682279264F68A900134E8A /* ARMapViewController.xib */; };
-		2C9198BD264FC6DD00311FA7 /* TestCMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9198BB264FC6DD00311FA7 /* TestCMViewController.m */; };
-		2C9198BE264FC6DD00311FA7 /* TestCMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9198BC264FC6DD00311FA7 /* TestCMViewController.xib */; };
 		2C9E69F91F74B39A00E2A555 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E69F81F74B39A00E2A555 /* main.m */; };
 		2C9E69FC1F74B39A00E2A555 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E69FB1F74B39A00E2A555 /* AppDelegate.m */; };
 		2C9E69FF1F74B39A00E2A555 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E69FE1F74B39A00E2A555 /* ViewController.m */; };
@@ -43,9 +41,6 @@
 		2C682277264F68A900134E8A /* ARMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARMapViewController.h; sourceTree = "<group>"; };
 		2C682278264F68A900134E8A /* ARMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARMapViewController.m; sourceTree = "<group>"; };
 		2C682279264F68A900134E8A /* ARMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARMapViewController.xib; sourceTree = "<group>"; };
-		2C9198BA264FC6DD00311FA7 /* TestCMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCMViewController.h; sourceTree = "<group>"; };
-		2C9198BB264FC6DD00311FA7 /* TestCMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCMViewController.m; sourceTree = "<group>"; };
-		2C9198BC264FC6DD00311FA7 /* TestCMViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCMViewController.xib; sourceTree = "<group>"; };
 		2C9E69F41F74B39A00E2A555 /* idrMap-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "idrMap-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9E69F81F74B39A00E2A555 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C9E69FA1F74B39A00E2A555 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -148,9 +143,6 @@
 				2C682277264F68A900134E8A /* ARMapViewController.h */,
 				2C682278264F68A900134E8A /* ARMapViewController.m */,
 				2C682279264F68A900134E8A /* ARMapViewController.xib */,
-				2C9198BA264FC6DD00311FA7 /* TestCMViewController.h */,
-				2C9198BB264FC6DD00311FA7 /* TestCMViewController.m */,
-				2C9198BC264FC6DD00311FA7 /* TestCMViewController.xib */,
 				2C42F96D2653D970008EAD61 /* OurdoorToIndoorViewController.h */,
 				2C42F96E2653D970008EAD61 /* OurdoorToIndoorViewController.m */,
 				2C42F96F2653D970008EAD61 /* OurdoorToIndoorViewController.xib */,
@@ -279,7 +271,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C9198BE264FC6DD00311FA7 /* TestCMViewController.xib in Resources */,
 				2C68227B264F68A900134E8A /* ARMapViewController.xib in Resources */,
 				2C9E6A071F74B39A00E2A555 /* LaunchScreen.storyboard in Resources */,
 				2C42F9712653D970008EAD61 /* OurdoorToIndoorViewController.xib in Resources */,
@@ -358,7 +349,6 @@
 				2C42F9702653D970008EAD61 /* OurdoorToIndoorViewController.m in Sources */,
 				2C9E69FC1F74B39A00E2A555 /* AppDelegate.m in Sources */,
 				2CF430132650DB8800BB9B6F /* NSArray+MASAdditions.m in Sources */,
-				2C9198BD264FC6DD00311FA7 /* TestCMViewController.m in Sources */,
 				2C9E69F91F74B39A00E2A555 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,7 +21,6 @@
 
 @property(nonatomic) WKWebView *webView;
 @property(nonatomic) IDRBaseLocationServer *locateServer;
-@property(nonatomic) NSTimer *timer;
 
 @property(nonatomic) AVCaptureVideoPreviewLayer *previewLayer;
 @property(nonatomic) AVCaptureDeviceInput *videoInput;
@@ -107,14 +106,12 @@
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation {
     
-    [self startLocate];
-    
-//    [self startTestBeacons];
-    
     [webView evaluateJavaScript:RequestSensorPermission_js() completionHandler:^(id _Nullable, NSError * _Nullable error) {
             
         NSLog(@"运行成功");
     }];
+    
+    [self startLocate];
 }
 
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
@@ -171,49 +168,6 @@
     [_locateServer start];
 }
 
-- (NSString *)createTestBeacons {
-    
-    NSMutableArray *beacons = [NSMutableArray new];
-    
-    for (NSInteger i = 9011; i < 9016; ++i) {
-        
-        NSString *major = [NSString stringWithFormat:@"16161"];
-        
-        NSString *minor = [NSString stringWithFormat:@"%ld", i];
-        
-        NSString *rss = [NSString stringWithFormat:@"-70"];
-        
-        NSString *accuracy = [NSString stringWithFormat:@"%.2f", 6.9];
-        
-        if (!major || !minor || !rss || !accuracy) {
-            
-            NSLog(@"error");
-        }
-        
-        NSDictionary *beaconDict = [[NSDictionary alloc] initWithObjects:@[major, rss, minor, accuracy] forKeys:@[@"major",@"rssi",@"minor",@"accuracy"]];
-        
-        [beacons addObject:beaconDict];
-    }
-    
-    NSData *data = [NSJSONSerialization dataWithJSONObject:beacons options:NSJSONWritingPrettyPrinted error:nil];
-    
-    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    
-    return str;
-}
-
-- (void)startTestBeacons {
-    
-    __weak ARMapViewController *weakSelf = self;
-    
-    _timer = [NSTimer scheduledTimerWithTimeInterval:3 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        
-        NSString *beacons = [weakSelf createTestBeacons];
-        
-        [weakSelf didGetRangeBeacons:beacons];
-    }];
-}
-
 #pragma mark IDRBaseLocationServerDelegate
 
 - (void)didGetRangeBeacons:(NSString*)beaconsStr {
@@ -244,8 +198,6 @@
     [_locateServer stop];
     
     [_session stopRunning];
-    
-    [_timer invalidate];
 }
 
 @end

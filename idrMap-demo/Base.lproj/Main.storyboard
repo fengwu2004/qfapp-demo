@@ -56,22 +56,13 @@
                                     <action selector="onOutdoorToIndoor:" destination="tRA-Ne-odW" eventType="touchUpInside" id="WNK-SN-FOe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMh-ta-hvB">
-                                <rect key="frame" x="149" y="549" width="77" height="30"/>
-                                <state key="normal" title="测试传感器"/>
-                                <connections>
-                                    <action selector="onTestSensor:" destination="tRA-Ne-odW" eventType="touchUpInside" id="iYa-k4-aaG"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DJj-aY-5OQ" firstAttribute="centerX" secondItem="Mu0-Bc-mvw" secondAttribute="centerX" id="4Ig-DL-qYA"/>
-                            <constraint firstItem="SMh-ta-hvB" firstAttribute="centerX" secondItem="TMh-ph-79W" secondAttribute="centerX" id="NHU-ZI-KPP"/>
                             <constraint firstItem="GJp-0K-TrB" firstAttribute="centerX" secondItem="DJj-aY-5OQ" secondAttribute="centerX" id="NyF-lc-jF8"/>
                             <constraint firstItem="TMh-ph-79W" firstAttribute="top" secondItem="GJp-0K-TrB" secondAttribute="bottom" constant="50" id="Ts7-Ym-n1j"/>
                             <constraint firstItem="GJp-0K-TrB" firstAttribute="top" secondItem="DJj-aY-5OQ" secondAttribute="bottom" constant="46.5" id="VoC-ZK-r8z"/>
-                            <constraint firstItem="SMh-ta-hvB" firstAttribute="top" secondItem="TMh-ph-79W" secondAttribute="bottom" constant="44" id="oXI-Mv-4XH"/>
                             <constraint firstItem="DJj-aY-5OQ" firstAttribute="centerY" secondItem="Mu0-Bc-mvw" secondAttribute="centerY" id="tHh-XL-CMg"/>
                             <constraint firstItem="TMh-ph-79W" firstAttribute="centerX" secondItem="GJp-0K-TrB" secondAttribute="centerX" id="vuM-GA-naA"/>
                         </constraints>
