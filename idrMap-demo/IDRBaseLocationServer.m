@@ -35,20 +35,6 @@
 
 @implementation IDRBaseLocationServer
 
-+ (instancetype)sharedInstance {
-    
-    static IDRBaseLocationServer *_instance = nil;
-    
-    static dispatch_once_t onceToken;
-    
-    dispatch_once(&onceToken, ^{
-        
-        _instance = [[IDRBaseLocationServer alloc] init];
-    });
-    
-    return _instance;
-}
-
 - (id)init {
     
     self = [super init];

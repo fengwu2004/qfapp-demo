@@ -65,11 +65,13 @@
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     
-    [webView evaluateJavaScript:RequestSensorPermission_js() completionHandler:^(id _Nullable, NSError * _Nullable error) {
+    //js获取运动传感器权限
+    [webView evaluateJavaScript:RequestSensorPermission_js() completionHandler:^(id obj, NSError * error) {
             
         NSLog(@"运行成功");
     }];
     
+    //开启定位
     if (!_locateServer) {
         
         _locateServer = [[IDRBaseLocationServer alloc] init];
@@ -84,6 +86,7 @@
 
 #pragma mark IDRBaseLocationServerDelegate
 
+//定位回调
 - (void)didGetRangeBeacons:(NSString*)beaconsStr {
   
     if (beaconsStr) {
@@ -98,6 +101,8 @@
 }
 
 #pragma mark IDRBaseLocationServerDelegate --end
+
+
 
 - (void)dealloc {
   

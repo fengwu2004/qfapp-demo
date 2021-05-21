@@ -9,15 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class CLHeading;
-
 /*
- * 在开启定位前，检测周围是否有蓝牙
- */
-
-/*
- * 当定位中出现无法获取蓝牙时开启的检测工具
- * 如果再次获取蓝牙，切换回动态定位状态
+ *  室内定位
  */
 
 @protocol IDRBaseLocationServerDelegate <NSObject>
@@ -38,8 +31,6 @@
 
 //----------------------------------------------------------------------------------------
 @interface IDRBaseLocationServer : NSObject
-
-+ (instancetype)sharedInstance;
 
 /**
  *  设置蓝牙beacon uuids, 定位之前需要设置

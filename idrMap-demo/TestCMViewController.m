@@ -16,6 +16,7 @@
 @property(nonatomic) IBOutlet UILabel *yaw;
 @property(nonatomic) IBOutlet UILabel *pitch;
 @property(nonatomic) IBOutlet UILabel *roll;
+@property(nonatomic) IBOutlet UILabel *heading;
 
 @end
 
@@ -38,22 +39,32 @@
     
     __weak TestCMViewController *weakSelf = self;
     
-    [_cmMgr startDeviceMotionUpdatesToQueue:_queue withHandler:^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error) {
-    
+    [_cmMgr startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXMagneticNorthZVertical toQueue:_queue withHandler:^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error) {
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             
             [weakSelf updatMotion:motion];
         });
     }];
+    
+//    [_cmMgr startDeviceMotionUpdatesToQueue:_queue withHandler:^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error) {
+//    
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            
+//            [weakSelf updatMotion:motion];
+//        });
+//    }];
 }
 
 - (void)updatMotion:(CMDeviceMotion *)motion {
     
-    _yaw.text = [NSString stringWithFormat:@"%.2f",motion.attitude.yaw * 180/M_PI];
+    _yaw.text = [NSString stringWithFormat:@"%.2f", motion.attitude.yaw * 180/M_PI];
     
-    _pitch.text = [NSString stringWithFormat:@"%.2f",motion.attitude.pitch * 180/M_PI];
+    _pitch.text = [NSString stringWithFormat:@"%.2f", motion.attitude.pitch * 180/M_PI];
     
-    _roll.text = [NSString stringWithFormat:@"%.2f",motion.attitude.roll * 180/M_PI];
+    _roll.text = [NSString stringWithFormat:@"%.2f", motion.attitude.roll * 180/M_PI];
+    
+    _heading.text = [NSString stringWithFormat:@"%.2f", motion.heading];
     
 //    NSLog(@"yaw = %f, pitch = %f, roll = %f", motion.attitude.yaw * 180/M_PI, motion.attitude.pitch * 180/M_PI, motion.attitude.roll * 180/M_PI);
 }
