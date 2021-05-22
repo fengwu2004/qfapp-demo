@@ -11,6 +11,7 @@
 #import "ARMapViewController.h"
 #import "TestCMViewController.h"
 #import "OurdoorToIndoorViewController.h"
+#import "TestTTSViewController.h"
 
 @interface ViewController ()
 
@@ -49,6 +50,13 @@
 - (IBAction)onTestSensor:(id)sender {
     
     TestCMViewController *vc = [TestCMViewController new];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)onTestTTS:(id)sender {
+    
+    TestTTSViewController *vc = [TestTTSViewController new];
     
     [self.navigationController pushViewController:vc animated:YES];
 }
