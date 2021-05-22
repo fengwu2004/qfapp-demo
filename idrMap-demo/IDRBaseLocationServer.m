@@ -96,7 +96,7 @@
     
     double pitch = motionData.attitude.pitch;
     
-    double yaw = motionData.attitude.yaw;
+    double yaw = fmod(1.5 * M_PI - motionData.attitude.yaw, 2 * M_PI);
     
     dispatch_async(dispatch_get_main_queue(), ^{
         
