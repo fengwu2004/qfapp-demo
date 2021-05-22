@@ -84,7 +84,7 @@
     
     __weak IDRBaseLocationServer *weakSelf = self;
     
-    [_cmMgr startDeviceMotionUpdatesToQueue:_queue withHandler:^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error) {
+    [_cmMgr startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXMagneticNorthZVertical toQueue:_queue withHandler:^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error) {
         
         [weakSelf updatMotion:motion];
     }];
