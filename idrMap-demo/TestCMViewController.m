@@ -58,7 +58,7 @@
 
 - (void)updatMotion:(CMDeviceMotion *)motion {
     
-    _yaw.text = [NSString stringWithFormat:@"%.2f", motion.attitude.yaw * 180/M_PI];
+    _yaw.text = [NSString stringWithFormat:@"%.2f", fmod(270 - motion.attitude.yaw * 180/M_PI, 360)];
     
     _pitch.text = [NSString stringWithFormat:@"%.2f", motion.attitude.pitch * 180/M_PI];
     
