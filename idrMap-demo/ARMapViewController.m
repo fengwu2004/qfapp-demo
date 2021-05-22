@@ -26,6 +26,8 @@
 @property(nonatomic) AVCaptureDeviceInput *videoInput;
 @property(nonatomic) AVCaptureSession *session;
 
+@property(nonatomic) BOOL arStarted;
+
 @end
 
 @implementation ARMapViewController
@@ -106,7 +108,7 @@
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation {
     
-    [webView evaluateJavaScript:RequestSensorPermission_js() completionHandler:^(id _Nullable, NSError * _Nullable error) {
+    [webView evaluateJavaScript:RequestSensorPermission_js() completionHandler:^(id object, NSError * error) {
             
         NSLog(@"运行成功");
     }];
@@ -143,6 +145,8 @@
     [_session startRunning];
     
     [_previewLayer setHidden:NO];
+    
+    _arStarted = YES;
 }
 
 - (void)onStopAR {
@@ -150,6 +154,8 @@
     [_session stopRunning];
     
     [_previewLayer setHidden:YES];
+    
+    _arStarted = NO;
 }
 
 - (void)startLocate {
@@ -185,12 +191,24 @@
 
 - (void)didGetEuler:(double)yaw pitch:(double)pitch roll:(double)roll {
     
-    NSString *js = [NSString stringWithFormat:@"updateEuler(%f, %f, %f)", M_PI - yaw, -1 * pitch, roll];
+    if (_arStarted) {
+        
+        NSString *js = [NSString stringWithFormat:@"updateEuler(%f, %f, %f)", yaw, -1 * pitch, roll];
 
-    [_webView evaluateJavaScript:js completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
-      
-      NSLog(@"更新欧拉角成功");
-    }];
+        [_webView evaluateJavaScript:js completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
+          
+          NSLog(@"更新欧拉角成功");
+        }];
+    }
+    else {
+        
+        NSString *js = [NSString stringWithFormat:@"updateDeviceAlphaDeg(%f)", yaw * 180/M_PI];
+
+        [_webView evaluateJavaScript:js completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
+          
+          NSLog(@"更新方向角成功");
+        }];
+    }
 }
 
 - (void)dealloc {
