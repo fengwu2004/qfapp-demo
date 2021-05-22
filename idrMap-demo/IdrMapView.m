@@ -108,7 +108,7 @@
     }
     else {
         
-        urlStr = [NSString stringWithFormat:@"https://wx.indoorun.com/ya/ysfz2/?regionId=16194197598672889&startCarNav=0&unitName=%@&uuid=%@", PhoneUUID, _unitName];
+        urlStr = [NSString stringWithFormat:@"https://wx.indoorun.com/ya/ysfz2/?regionId=16194197598672889&startCarNav=0&unitName=%@&uuid=%@", _unitName, PhoneUUID];
     }
 
     NSURL *url = [[NSURL alloc] initWithString:urlStr];
