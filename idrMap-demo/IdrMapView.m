@@ -26,18 +26,23 @@
 @property(nonatomic) AVCaptureSession *session;
 
 @property(nonatomic) BOOL arStarted;
+@property(nonatomic) BOOL enableAR;
+@property(nonatomic) NSString *unitName;
 
 @end
 
+
 @implementation IdrMapView
 
-- (id)initWithFrame:(CGRect)frame enableAR:(BOOL)enableAR {
+- (id)initWithFrame:(CGRect)frame enableAR:(BOOL)enableAR unitName:(NSString *)unitName {
     
     self = [super initWithFrame:frame];
     
     if (self) {
         
         _enableAR = enableAR;
+        
+        _unitName = unitName;
     
         [self setupPreview];
 
@@ -103,7 +108,7 @@
     }
     else {
         
-        urlStr = [NSString stringWithFormat:@"https://wx.indoorun.com/ya/ysfz2/?regionId=16194197598672889&startCarNav=0&unitName=670&uuid=%@", PhoneUUID];
+        urlStr = [NSString stringWithFormat:@"https://wx.indoorun.com/ya/ysfz2/?regionId=16194197598672889&startCarNav=0&unitName=%@&uuid=%@", PhoneUUID, _unitName];
     }
 
     NSURL *url = [[NSURL alloc] initWithString:urlStr];

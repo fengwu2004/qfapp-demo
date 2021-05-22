@@ -12,9 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface IdrMapView : UIView
 
-@property(nonatomic) BOOL enableAR;
-
-- (id)initWithFrame:(CGRect)frame enableAR:(BOOL)enableAR;
+- (id)initWithFrame:(CGRect)frame enableAR:(BOOL)enableAR unitName:(NSString *)unitName;
 
 @end
 
