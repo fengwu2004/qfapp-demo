@@ -7,9 +7,9 @@
 //
 
 #import "MapViewController.h"
-#import<WebKit/WebKit.h>
+#import <WebKit/WebKit.h>
 #import "IDRBaseLocationServer.h"
-#import "Masonry/Masonry.h"
+#import <Masonry/Masonry.h>
 
 #define PhoneUUID [[[UIDevice currentDevice] identifierForVendor] UUIDString]
 
@@ -43,11 +43,7 @@
     
     [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
             
-        make.left.right.mas_equalTo(self.view);
-        
-        make.top.equalTo(self.view.mas_topMargin);
-        
-        make.bottom.equalTo(self.view.mas_bottomMargin);
+        make.top.bottom.left.right.mas_equalTo(self.view);
     }];
   
     NSString *urlStr = [NSString stringWithFormat:@"https://wx.indoorun.com/ya/ysfz2/?regionId=16194197598672889&startCarNav=0&unitName=670&uuid=%@", PhoneUUID];

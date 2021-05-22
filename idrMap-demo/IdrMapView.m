@@ -1,23 +1,22 @@
 //
-//  ARMapViewController.m
-//  qfapp-demo
+//  IdrMapView.m
+//  idrMap-demo
 //
-//  Created by li on 2021/5/15.
+//  Created by li on 2021/5/22.
 //  Copyright © 2021 yellfun. All rights reserved.
 //
 
-#import "ARMapViewController.h"
+#import "IdrMapView.h"
 #import <WebKit/WebKit.h>
 #import "IDRBaseLocationServer.h"
-#import <AVFoundation/AVFoundation.h>
-#import <WebKit/WebKit.h>
 #import <Masonry/Masonry.h>
+#import <AVFoundation/AVFoundation.h>
 #import "YYWeakProxy.h"
 
-#define MyJSInterface @"MyJSInterface"
 #define PhoneUUID [[[UIDevice currentDevice] identifierForVendor] UUIDString]
+#define MyJSInterface @"MyJSInterface"
 
-@interface ARMapViewController () <IDRBaseLocationServerDelegate, WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate>
+@interface IdrMapView () <IDRBaseLocationServerDelegate, WKNavigationDelegate, WKUIDelegate>
 
 @property(nonatomic) WKWebView *webView;
 @property(nonatomic) IDRBaseLocationServer *locateServer;
@@ -30,15 +29,22 @@
 
 @end
 
-@implementation ARMapViewController
+@implementation IdrMapView
 
-- (void)viewDidLoad {
-  
-    [super viewDidLoad];
+- (id)initWithFrame:(CGRect)frame enableAR:(BOOL)enableAR {
     
-    [self setupPreview];
+    self = [super initWithFrame:frame];
+    
+    if (self) {
+        
+        _enableAR = enableAR;
+    
+        [self setupPreview];
 
-    [self setupWebview];
+        [self setupWebview];
+    }
+    
+    return self;
 }
 
 - (void)setupPreview {
@@ -55,7 +61,7 @@
     
     _previewLayer.frame = CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height);
     
-    [self.view.layer addSublayer:_previewLayer];
+    [self.layer addSublayer:_previewLayer];
 }
 
 - (void)setupWebview {
@@ -82,14 +88,23 @@
 
     _webView.opaque = NO;
     
-    [self.view addSubview:_webView];
+    [self addSubview:_webView];
     
     [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
             
-        make.top.bottom.left.right.mas_equalTo(self.view);
+        make.top.bottom.left.right.mas_equalTo(self);
     }];
     
-    NSString *urlStr = [NSString stringWithFormat:@"https://wx.indoorun.com/ya/ysfzar/?&uuid=%@", PhoneUUID];
+    NSString *urlStr = nil;
+    
+    if (_enableAR) {
+        
+        urlStr = [NSString stringWithFormat:@"https://wx.indoorun.com/ya/ysfzar/?&uuid=%@", PhoneUUID];
+    }
+    else {
+        
+        urlStr = [NSString stringWithFormat:@"https://wx.indoorun.com/ya/ysfz2/?regionId=16194197598672889&startCarNav=0&unitName=670&uuid=%@", PhoneUUID];
+    }
 
     NSURL *url = [[NSURL alloc] initWithString:urlStr];
 
