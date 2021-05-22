@@ -104,11 +104,6 @@
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation {
     
-    [webView evaluateJavaScript:RequestSensorPermission_js() completionHandler:^(id object, NSError * error) {
-            
-        NSLog(@"运行成功");
-    }];
-    
     [self startLocate];
 }
 
