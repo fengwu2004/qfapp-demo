@@ -55,6 +55,3 @@
 @property (nonatomic, assign, readonly) BOOL isLocationAvailable;
 
 @end
-
-//--------------------------------------------------------------------------------
-NSString * RequestSensorPermission_js(void);

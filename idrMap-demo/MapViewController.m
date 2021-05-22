@@ -61,12 +61,6 @@
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     
-    //js获取运动传感器权限
-    [webView evaluateJavaScript:RequestSensorPermission_js() completionHandler:^(id obj, NSError * error) {
-            
-        NSLog(@"运行成功");
-    }];
-    
     //开启定位
     if (!_locateServer) {
         
@@ -96,9 +90,17 @@
     }
 }
 
+- (void)didGetEuler:(double)yaw pitch:(double)pitch roll:(double)roll {
+    
+    NSString *js = [NSString stringWithFormat:@"updateDeviceAlphaDeg(%f)", yaw * 180/M_PI];
+
+    [_webView evaluateJavaScript:js completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
+      
+      NSLog(@"更新方向角成功");
+    }];
+}
+
 #pragma mark IDRBaseLocationServerDelegate --end
-
-
 
 - (void)dealloc {
   
