@@ -27,6 +27,8 @@
 @property(nonatomic) AVCaptureSession *session;
 
 @property(nonatomic) BOOL arStarted;
+@property(nonatomic) double current_d;//当前角度
+@property(nonatomic) double d;//北偏角
 
 @end
 
@@ -184,9 +186,84 @@
     }
 }
 
+- (double)filterYaw:(double)yaw {
+    
+    if (yaw < M_PI * (_d/180 + 1.0/4)){
+        
+        yaw = M_PI * _d/180;
+    }
+    else if(yaw < M_PI * (_d/180 + 3.0/4)) {
+        
+        yaw = M_PI * (_d/180 + 1.0/2);
+    }
+    else if(yaw < M_PI*(_d/180 + 5.0/4)) {
+        
+        yaw = M_PI * (_d/180 + 1.0);
+    }
+    else if(yaw < M_PI * (_d/180 + 7.0/4)){
+        
+        yaw = M_PI * (_d/180 + 3.0/2);
+    }
+    else {
+        
+        yaw = M_PI * _d/180;
+    }
+    
+    _current_d = [self filter:_current_d next:yaw];
+    
+    return _current_d;
+}
+
+- (double)filter:(double)current next:(double)next {
+    
+    static double step = M_PI/32.0;
+    
+    if (fabs(next - current) < step) {
+        
+        return next;
+    }
+    
+    if(fabs(next-current)<M_PI){
+        
+        if (next > current){
+            
+            current += step;
+        }
+        else {
+            
+            current -= step;
+        }
+    }
+    else {
+        
+        if (next > current) {
+            
+            current -= step;
+            
+            if (current < 0) {
+                
+                current += 2 * M_PI;
+            }
+        }
+        else {
+            
+            current += step;
+            
+            if (current > M_PI * 2) {
+                
+                current -= M_PI * 2;
+            }
+        }
+    }
+    
+    return current;
+}
+
 - (void)didGetEuler:(double)yaw pitch:(double)pitch roll:(double)roll {
     
     if (_arStarted) {
+        
+        yaw = [self filterYaw:yaw];
         
         NSString *js = [NSString stringWithFormat:@"updateEuler(%f, %f, %f)", yaw, -1 * pitch, roll];
 
