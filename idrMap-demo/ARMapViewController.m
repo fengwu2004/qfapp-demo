@@ -30,6 +30,8 @@
 @property(nonatomic) double current_d;//当前角度
 @property(nonatomic) double d;//北偏角
 
+@property(nonatomic) NSTimer *timer;
+
 @end
 
 @implementation ARMapViewController
@@ -111,6 +113,8 @@
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation {
     
     [self startLocate];
+    
+    [self startTestBeacons];
 }
 
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
@@ -223,9 +227,9 @@
         return next;
     }
     
-    if(fabs(next-current)<M_PI){
+    if (fabs(next - current) < M_PI) {
         
-        if (next > current){
+        if (next > current) {
             
             current += step;
         }
@@ -289,5 +293,53 @@
     
     [_session stopRunning];
 }
+
+
+#ifdef DEBUG
+
+- (NSString *)createTestBeacons {
+    
+    NSMutableArray *beacons = [NSMutableArray new];
+    
+    for (NSInteger i = 9011; i < 9016; ++i) {
+        
+        NSString *major = [NSString stringWithFormat:@"16161"];
+        
+        NSString *minor = [NSString stringWithFormat:@"%ld", i];
+        
+        NSString *rss = [NSString stringWithFormat:@"-70"];
+        
+        NSString *accuracy = [NSString stringWithFormat:@"%.2f", 6.9];
+        
+        if (!major || !minor || !rss || !accuracy) {
+            
+            NSLog(@"error");
+        }
+        
+        NSDictionary *beaconDict = [[NSDictionary alloc] initWithObjects:@[major, rss, minor, accuracy] forKeys:@[@"major",@"rssi",@"minor",@"accuracy"]];
+        
+        [beacons addObject:beaconDict];
+    }
+    
+    NSData *data = [NSJSONSerialization dataWithJSONObject:beacons options:NSJSONWritingPrettyPrinted error:nil];
+    
+    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    
+    return str;
+}
+
+- (void)startTestBeacons {
+    
+    __weak ARMapViewController *weakSelf = self;
+    
+    _timer = [NSTimer scheduledTimerWithTimeInterval:3 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        
+        NSString *beacons = [weakSelf createTestBeacons];
+        
+        [weakSelf didGetRangeBeacons:beacons];
+    }];
+}
+
+#endif
 
 @end
