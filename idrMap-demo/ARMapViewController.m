@@ -86,7 +86,11 @@
     
     [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
             
-        make.top.bottom.left.right.mas_equalTo(self.view);
+        make.left.right.mas_equalTo(self.view);
+        
+        make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop);
+        
+        make.bottom.mas_equalTo(self.view.mas_safeAreaLayoutGuideBottom);
     }];
     
     NSString *urlStr = [NSString stringWithFormat:@"https://wx.indoorun.com/ya/ysfzar/?&uuid=%@", PhoneUUID];

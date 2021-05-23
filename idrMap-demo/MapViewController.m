@@ -23,6 +23,8 @@
 @implementation MapViewController
 
 - (void)viewDidLoad {
+    
+    _unitName = @"670";
   
     [super viewDidLoad];
 
@@ -43,10 +45,14 @@
     
     [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
             
-        make.top.bottom.left.right.mas_equalTo(self.view);
+        make.left.right.mas_equalTo(self.view);
+        
+        make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop);
+        
+        make.bottom.mas_equalTo(self.view.mas_safeAreaLayoutGuideBottom);
     }];
-  
-    NSString *urlStr = [NSString stringWithFormat:@"https://wx.indoorun.com/ya/ysfz2/?regionId=16194197598672889&startCarNav=0&unitName=670&uuid=%@", PhoneUUID];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"https://wx.indoorun.com/ya/ysfz2/?regionId=16194197598672889&startCarNav=0&unitName=%@&uuid=%@", _unitName, PhoneUUID];
 
     NSURL *url = [[NSURL alloc] initWithString:urlStr];
 
