@@ -12,8 +12,11 @@
 #import "TestCMViewController.h"
 #import "OurdoorToIndoorViewController.h"
 #import "TestTTSViewController.h"
+#import "EBAppStorePay.h"
 
-@interface ViewController ()
+@interface ViewController ()<EBAppStorePayDelegate>
+
+@property(nonatomic) EBAppStorePay *pay;
 
 @end
 
@@ -42,16 +45,22 @@
 
 - (IBAction)onOutdoorToIndoor:(id)sender {
     
-    OurdoorToIndoorViewController *vc = [OurdoorToIndoorViewController new];
-    
-    [self.navigationController pushViewController:vc animated:YES];
+//    OurdoorToIndoorViewController *vc = [OurdoorToIndoorViewController new];
+//
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)onTestSensor:(id)sender {
     
-    TestCMViewController *vc = [TestCMViewController new];
+//    TestCMViewController *vc = [TestCMViewController new];
+//
+//    [self.navigationController pushViewController:vc animated:YES];
     
-    [self.navigationController pushViewController:vc animated:YES];
+    _pay = [[EBAppStorePay alloc] init];
+    
+    _pay.delegate = self;
+    
+    [_pay startBuyToAppStore:@"fiveyuanartest"];
 }
 
 - (IBAction)onTestTTS:(id)sender {

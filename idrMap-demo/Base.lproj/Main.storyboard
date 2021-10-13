@@ -42,28 +42,28 @@
                                     <action selector="onEnter:" destination="tRA-Ne-odW" eventType="touchUpInside" id="t6c-hR-sGE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJp-0K-TrB">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJp-0K-TrB">
                                 <rect key="frame" x="162" y="395" width="51" height="30"/>
                                 <state key="normal" title="AR导航"/>
                                 <connections>
                                     <action selector="onARMap:" destination="tRA-Ne-odW" eventType="touchUpInside" id="dF6-ZK-lDB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMh-ph-79W">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMh-ph-79W">
                                 <rect key="frame" x="164.5" y="475" width="46" height="30"/>
                                 <state key="normal" title="室内外"/>
                                 <connections>
                                     <action selector="onOutdoorToIndoor:" destination="tRA-Ne-odW" eventType="touchUpInside" id="WNK-SN-FOe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMh-ta-hvB">
-                                <rect key="frame" x="149" y="549" width="77" height="30"/>
-                                <state key="normal" title="测试传感器"/>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMh-ta-hvB">
+                                <rect key="frame" x="160.5" y="549" width="54" height="30"/>
+                                <state key="normal" title="测试IAP"/>
                                 <connections>
                                     <action selector="onTestSensor:" destination="tRA-Ne-odW" eventType="touchUpInside" id="iYa-k4-aaG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cs8-uP-N3O">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cs8-uP-N3O">
                                 <rect key="frame" x="157" y="113" width="61" height="30"/>
                                 <state key="normal" title="Test TTS"/>
                                 <connections>

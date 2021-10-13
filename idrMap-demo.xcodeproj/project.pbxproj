@@ -36,6 +36,8 @@
 		2CF430172650DB8800BB9B6F /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4300D2650DB8800BB9B6F /* MASViewAttribute.m */; };
 		2CF4301A2650E1B300BB9B6F /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF430192650E1B300BB9B6F /* YYWeakProxy.m */; };
 		B67E3EA86F59D92187720455 /* libPods-idrMap-demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DDDD711592BFC889AD1116 /* libPods-idrMap-demo.a */; };
+		BADFD5AA26E89AD600119718 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADFD5A926E89AD600119718 /* StoreKit.framework */; };
+		BADFD5AD26E89C4000119718 /* EBAppStorePay.m in Sources */ = {isa = PBXBuildFile; fileRef = BADFD5AC26E89C4000119718 /* EBAppStorePay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +98,9 @@
 		3C2D374820A7BE14A6DA9F08 /* Pods-idrMap-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idrMap-demo.release.xcconfig"; path = "Target Support Files/Pods-idrMap-demo/Pods-idrMap-demo.release.xcconfig"; sourceTree = "<group>"; };
 		905961B76267CBBB0E7E0BED /* Pods-qfapp-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qfapp-demo.debug.xcconfig"; path = "Target Support Files/Pods-qfapp-demo/Pods-qfapp-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		9D4BF55D13AEC48421B58AE8 /* Pods-idrMap-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idrMap-demo.debug.xcconfig"; path = "Target Support Files/Pods-idrMap-demo/Pods-idrMap-demo.debug.xcconfig"; sourceTree = "<group>"; };
+		BADFD5A926E89AD600119718 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BADFD5AB26E89C4000119718 /* EBAppStorePay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EBAppStorePay.h; sourceTree = "<group>"; };
+		BADFD5AC26E89C4000119718 /* EBAppStorePay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EBAppStorePay.m; sourceTree = "<group>"; };
 		F4DDDD711592BFC889AD1116 /* libPods-idrMap-demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-idrMap-demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D5BCA1DA57FC8EA27D3B61 /* Pods-qfapp-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qfapp-demo.release.xcconfig"; path = "Target Support Files/Pods-qfapp-demo/Pods-qfapp-demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +111,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B67E3EA86F59D92187720455 /* libPods-idrMap-demo.a in Frameworks */,
+				BADFD5AA26E89AD600119718 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +168,8 @@
 				2C31FCE12658A48A0089EA18 /* TestTTSViewController.h */,
 				2C31FCE22658A48A0089EA18 /* TestTTSViewController.m */,
 				2C31FCE32658A48A0089EA18 /* TestTTSViewController.xib */,
+				BADFD5AB26E89C4000119718 /* EBAppStorePay.h */,
+				BADFD5AC26E89C4000119718 /* EBAppStorePay.m */,
 			);
 			path = "idrMap-demo";
 			sourceTree = "<group>";
@@ -220,6 +228,7 @@
 		B59EE741637E6F3324FE3E96 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BADFD5A926E89AD600119718 /* StoreKit.framework */,
 				F4DDDD711592BFC889AD1116 /* libPods-idrMap-demo.a */,
 			);
 			name = Frameworks;
@@ -370,6 +379,7 @@
 				2CF430132650DB8800BB9B6F /* NSArray+MASAdditions.m in Sources */,
 				2C9198BD264FC6DD00311FA7 /* TestCMViewController.m in Sources */,
 				2C9E69F91F74B39A00E2A555 /* main.m in Sources */,
+				BADFD5AD26E89C4000119718 /* EBAppStorePay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +510,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.we.wret;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Debug;
 		};
@@ -518,6 +529,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.we.wret;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Release;
 		};

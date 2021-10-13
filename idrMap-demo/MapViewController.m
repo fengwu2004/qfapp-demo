@@ -10,6 +10,7 @@
 #import<WebKit/WebKit.h>
 #import "IDRBaseLocationServer.h"
 #import "Masonry/Masonry.h"
+#import "EBAppStorePay.h"
 
 #define PhoneUUID [[[UIDevice currentDevice] identifierForVendor] UUIDString]
 
@@ -17,6 +18,8 @@
 
 @property(nonatomic) WKWebView *webView;
 @property(nonatomic) IDRBaseLocationServer *locateServer;
+@property(nonatomic) UIButton *openAR;
+@property(nonatomic) EBAppStorePay *pay;
 
 @end
 
@@ -25,8 +28,36 @@
 - (void)viewDidLoad {
   
     [super viewDidLoad];
+    
+    _pay = [[EBAppStorePay alloc] init];
 
     [self setupWebview];
+    
+    [self setupButs];
+}
+
+- (void)setupButs {
+    
+    _openAR = [[UIButton alloc] initWithFrame:CGRectMake(10, 200, 60, 60)];
+    
+    _openAR.layer.cornerRadius = 3;
+    
+    [_openAR setTitle:@"AR" forState:UIControlStateNormal];
+    
+    [_openAR setTitleColor:UIColor.blueColor forState:UIControlStateNormal];
+    
+    _openAR.layer.borderWidth = 1;
+    
+    _openAR.layer.borderColor = UIColor.blueColor.CGColor;
+    
+    [_openAR addTarget:self action:@selector(doOpenAR) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:_openAR];
+}
+
+- (void)doOpenAR {
+    
+    [_pay startBuyToAppStore:@"fiveyuanartest"];
 }
 
 - (void)setupWebview {
