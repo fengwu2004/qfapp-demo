@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		2C31FCE42658A48A0089EA18 /* TestTTSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C31FCE22658A48A0089EA18 /* TestTTSViewController.m */; };
 		2C31FCE52658A48A0089EA18 /* TestTTSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C31FCE32658A48A0089EA18 /* TestTTSViewController.xib */; };
-		2C42F9702653D970008EAD61 /* OurdoorToIndoorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F96E2653D970008EAD61 /* OurdoorToIndoorViewController.m */; };
-		2C42F9712653D970008EAD61 /* OurdoorToIndoorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C42F96F2653D970008EAD61 /* OurdoorToIndoorViewController.xib */; };
 		2C68227A264F68A900134E8A /* ARMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C682278264F68A900134E8A /* ARMapViewController.m */; };
 		2C68227B264F68A900134E8A /* ARMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C682279264F68A900134E8A /* ARMapViewController.xib */; };
 		2C9198BD264FC6DD00311FA7 /* TestCMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9198BB264FC6DD00311FA7 /* TestCMViewController.m */; };
@@ -44,9 +42,6 @@
 		2C31FCE12658A48A0089EA18 /* TestTTSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTTSViewController.h; sourceTree = "<group>"; };
 		2C31FCE22658A48A0089EA18 /* TestTTSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTTSViewController.m; sourceTree = "<group>"; };
 		2C31FCE32658A48A0089EA18 /* TestTTSViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTTSViewController.xib; sourceTree = "<group>"; };
-		2C42F96D2653D970008EAD61 /* OurdoorToIndoorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OurdoorToIndoorViewController.h; sourceTree = "<group>"; };
-		2C42F96E2653D970008EAD61 /* OurdoorToIndoorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OurdoorToIndoorViewController.m; sourceTree = "<group>"; };
-		2C42F96F2653D970008EAD61 /* OurdoorToIndoorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OurdoorToIndoorViewController.xib; sourceTree = "<group>"; };
 		2C682277264F68A900134E8A /* ARMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARMapViewController.h; sourceTree = "<group>"; };
 		2C682278264F68A900134E8A /* ARMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARMapViewController.m; sourceTree = "<group>"; };
 		2C682279264F68A900134E8A /* ARMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARMapViewController.xib; sourceTree = "<group>"; };
@@ -162,9 +157,6 @@
 				2C9198BA264FC6DD00311FA7 /* TestCMViewController.h */,
 				2C9198BB264FC6DD00311FA7 /* TestCMViewController.m */,
 				2C9198BC264FC6DD00311FA7 /* TestCMViewController.xib */,
-				2C42F96D2653D970008EAD61 /* OurdoorToIndoorViewController.h */,
-				2C42F96E2653D970008EAD61 /* OurdoorToIndoorViewController.m */,
-				2C42F96F2653D970008EAD61 /* OurdoorToIndoorViewController.xib */,
 				2C31FCE12658A48A0089EA18 /* TestTTSViewController.h */,
 				2C31FCE22658A48A0089EA18 /* TestTTSViewController.m */,
 				2C31FCE32658A48A0089EA18 /* TestTTSViewController.xib */,
@@ -245,7 +237,6 @@
 				2C9E69F01F74B39A00E2A555 /* Sources */,
 				2C9E69F11F74B39A00E2A555 /* Frameworks */,
 				2C9E69F21F74B39A00E2A555 /* Resources */,
-				69E831D170B0667E7C54977E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -299,7 +290,6 @@
 				2C9198BE264FC6DD00311FA7 /* TestCMViewController.xib in Resources */,
 				2C68227B264F68A900134E8A /* ARMapViewController.xib in Resources */,
 				2C9E6A071F74B39A00E2A555 /* LaunchScreen.storyboard in Resources */,
-				2C42F9712653D970008EAD61 /* OurdoorToIndoorViewController.xib in Resources */,
 				2C31FCE52658A48A0089EA18 /* TestTTSViewController.xib in Resources */,
 				2C9E6A041F74B39A00E2A555 /* Assets.xcassets in Resources */,
 				2C9E6A021F74B39A00E2A555 /* Main.storyboard in Resources */,
@@ -310,26 +300,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		69E831D170B0667E7C54977E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-idrMap-demo/Pods-idrMap-demo-resources.sh",
-				"${PODS_ROOT}/AMapNavi/AMapNaviKit.framework/AMapNavi.bundle",
-				"${PODS_ROOT}/AMapNavi/AMapNaviKit.framework/AMap.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMapNavi.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-idrMap-demo/Pods-idrMap-demo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DFFEFE68829C3045D16B9561 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,7 +344,6 @@
 				2C31FCE42658A48A0089EA18 /* TestTTSViewController.m in Sources */,
 				2CF430112650DB8800BB9B6F /* MASConstraintMaker.m in Sources */,
 				2C9E6A141F74B5B600E2A555 /* MapViewController.m in Sources */,
-				2C42F9702653D970008EAD61 /* OurdoorToIndoorViewController.m in Sources */,
 				2C9E69FC1F74B39A00E2A555 /* AppDelegate.m in Sources */,
 				2CF430132650DB8800BB9B6F /* NSArray+MASAdditions.m in Sources */,
 				2C9198BD264FC6DD00311FA7 /* TestCMViewController.m in Sources */,

@@ -1,1 +1,4 @@
 Pods/*
+*.xcuserstate
+*.xcbkptlist
+*.plist
